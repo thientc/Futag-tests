@@ -15,6 +15,8 @@ echo "************************************************"
 echo ""
 
 echo "-- [Futag]: Getting latest Futag package."
-
 wget https://github.com/ispras/Futag/releases/download/latest/futag-llvm-package.latest.tar.xz
+
+echo "-- [Futag]: Extracting..."
 tar xf futag-llvm-package.latest.tar.xz
+echo "-- [Futag]: Done!"
