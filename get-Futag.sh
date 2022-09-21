@@ -19,4 +19,4 @@ wget https://github.com/ispras/Futag/releases/download/latest/futag-llvm-package
 
 echo "-- [Futag]: Extracting..."
 tar xf futag-llvm-package.latest.tar.xz
-echo "-- [Futag]: Done!"
+echo "-- [Futag]: Futag package is extracted to futag-llvm-package folder!"
