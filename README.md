@@ -23,3 +23,8 @@ For example:
 ~/Futag-tests/json-c$ ./prepare.sh
 ~/Futag-tests/json-c$ python build.py
 ```
+## Testing all libraries
+- Run script test-libs.sh for testing all libraries in repository.
+```bash
+~/Futag-tests$ ./test-libs.sh
+```
