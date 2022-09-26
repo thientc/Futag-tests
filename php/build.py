@@ -9,17 +9,15 @@ from futag.sysmsg import *
 
 lib_test = Builder(
     "../../futag-llvm-package/", 
-    "json-c",
-    COMPILER_FLAGS,
-    False,
+    "php7",
 )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
     "../../futag-llvm-package/", 
-    "json-c",
-    )
+    "php7",
+)
 lib_test.gen_targets()
 lib_test.compile_targets()
 

@@ -25,6 +25,10 @@ pugixml/pugixml-1.12.tar.gz
 curl/curl
 curl/curl-7.85.0.tar.gz
 
+php/php7
+php/curl-7.85.0.tar.gz
+
 **/python-venv
 **/a.out
+**/*.tar.gz
 .subfolder.tmp

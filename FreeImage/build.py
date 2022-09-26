@@ -10,7 +10,14 @@ os.chdir("FreeImage")
 
 lib_test = Builder(
     "../../futag-llvm-package/", 
-    ".", 
+    ".",
+    COMPILER_FLAGS,
+    False,
+    ".",
+    INSTALL_PATH,
+    ANALYSIS_PATH,
+    16
+
 )
 lib_test.auto_build()
 lib_test.analyze()
@@ -18,6 +25,10 @@ lib_test.analyze()
 lib_test = Generator(
     "../../futag-llvm-package/", 
     ".",
+    ANALYSIS_FILE_PATH,
+    FUZZ_DRIVER_PATH,
+    ".",
+    INSTALL_PATH
 )
 lib_test.gen_targets()
 lib_test.compile_targets()
