@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker run -it --rm --privileged --network host -v `pwd`:/host --name futag_test_jsonc_ubuntu22 futag_test_jsonc_ubuntu22 /bin/bash
+docker run -it --rm --privileged --network host -v `pwd`:/host --name futag_test_curl_ubuntu22 futag_test_curl_ubuntu22 /bin/bash

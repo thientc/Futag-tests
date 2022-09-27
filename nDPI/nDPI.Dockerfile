@@ -8,7 +8,7 @@ LABEL maintainer="thientc84@gmail.com"
 LABEL description="This is custom Docker Image based on Ubuntu 22.04 for testing Futag."
 
 RUN apt update --fix-missing
-RUN apt install -y apt-utils libncurses5 gcc g++ make gdb openssh-client git wget xz-utils python3 python3-pip nano cmake libtool
+RUN apt install -y apt-utils libncurses5 gcc g++ make gdb openssh-client git wget xz-utils python3 python3-pip nano cmake libtool pkg-config libpcap-dev libjson-c-dev
 RUN useradd -ms /bin/bash futag
 
 USER futag
@@ -22,5 +22,6 @@ RUN pip install futag-llvm-package/python-package/futag-1.1.tar.gz
 
 USER futag 
 WORKDIR /home/futag/Futag-tests/nDPI
+ADD prepare.sh .
 RUN ./prepare.sh
 RUN python3 build.py

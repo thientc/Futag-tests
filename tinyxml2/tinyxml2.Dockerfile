@@ -21,6 +21,6 @@ USER root
 RUN pip install futag-llvm-package/python-package/futag-1.1.tar.gz
 
 USER futag 
-WORKDIR /home/futag/Futag-tests/pugixml
+WORKDIR /home/futag/Futag-tests/tinyxml
 RUN ./prepare.sh
 RUN python3 build.py

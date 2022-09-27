@@ -11,7 +11,7 @@ from futag.generator import *
 from futag.sysmsg import * 
 os.chdir("nDPI")
 lib_test = Builder(
-    "../../futag-llvm-package/", 
+    "/home/futag/Futag-tests/futag-llvm-package/",  
     ".",
     COMPILER_FLAGS,
     False, 
@@ -23,7 +23,7 @@ lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
-    "../../futag-llvm-package/", 
+    "/home/futag/Futag-tests/futag-llvm-package/", 
     ".",
     ANALYSIS_FILE_PATH,
     FUZZ_DRIVER_PATH,
@@ -33,4 +33,4 @@ lib_test = Generator(
 lib_test.gen_targets()
 lib_test.compile_targets()
 
-print("-- [Futag]: fuzz-drivers are saved in curl/futag-fuzz-targets!")
+print("-- [Futag]: fuzz-drivers are saved in nDPI/futag-fuzz-targets!")
