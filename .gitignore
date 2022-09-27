@@ -32,3 +32,5 @@ php/curl-7.85.0.tar.gz
 **/a.out
 **/*.tar.gz
 .subfolder.tmp
+
+.vscode/

@@ -14,8 +14,8 @@ RUN useradd -ms /bin/bash futag
 USER futag
 WORKDIR /home/futag/
 RUN git clone https://github.com/thientc/Futag-tests.git
-RUN wget https://github.com/ispras/Futag/releases/download/latest/futag-llvm-package.latest.tar.xz
-RUN tar xf futag-llvm-package.latest.tar.xz
+WORKDIR /home/futag/Futag-tests
+RUN ./get-Futag.sh
 
 USER root
 RUN pip install futag-llvm-package/python-package/futag-1.1.tar.gz

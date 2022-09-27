@@ -8,19 +8,23 @@ from futag.generator import *
 from futag.sysmsg import * 
 
 lib_test = Builder(
-    "../../futag-llvm-package/", 
+    "/home/futag/Futag-tests/futag-llvm-package/", 
     "json-c",
     COMPILER_FLAGS,
-    False,
+    True,
+    BUILD_PATH,
+    INSTALL_PATH,
+    ANALYSIS_PATH,
+    16,
 )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
-    "../../futag-llvm-package/", 
+    "/home/futag/Futag-tests/futag-llvm-package/", 
     "json-c",
     )
 lib_test.gen_targets()
-lib_test.compile_targets()
+lib_test.compile_targets(True, 16)
 
 # print("-- [Futag]: fuzz-drivers are saved in json-c/futag-fuzz-targets!")

@@ -9,7 +9,7 @@ from futag.generator import *
 os.chdir("FreeImage")
 
 lib_test = Builder(
-    "../../futag-llvm-package/", 
+    "/home/futag/Futag-tests/futag-llvm-package/", 
     ".",
     COMPILER_FLAGS,
     False,
@@ -23,7 +23,7 @@ lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
-    "../../futag-llvm-package/", 
+    "/home/futag/Futag-tests/futag-llvm-package/", 
     ".",
     ANALYSIS_FILE_PATH,
     FUZZ_DRIVER_PATH,
@@ -31,6 +31,6 @@ lib_test = Generator(
     INSTALL_PATH
 )
 lib_test.gen_targets()
-lib_test.compile_targets()
+lib_test.compile_targets(True, 16)
 
 print("-- [Futag]: fuzz-drivers are saved in FreeImage/futag-fuzz-targets!")

@@ -1,6 +1,6 @@
 default: all;
 
 all:
-	../futag-llvm-package/bin/clang++ -g -O0 -fsanitize=fuzzer,address fuzzme.cc
+	/home/futag/Futag-tests/futag-llvm-package/bin/clang++ -g -O0 -fsanitize=fuzzer,address fuzzme.cc
 clean:
 	rm a.out

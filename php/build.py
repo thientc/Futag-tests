@@ -8,7 +8,7 @@ from futag.generator import *
 from futag.sysmsg import * 
 
 lib_test = Builder(
-    "../../futag-llvm-package/", 
+    "/home/futag/Futag-tests/futag-llvm-package/", 
     "php7",
     COMPILER_FLAGS,
     True,
@@ -22,7 +22,7 @@ lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
-    "../../futag-llvm-package/", 
+    "/home/futag/Futag-tests/futag-llvm-package/", 
     "php7",
 )
 lib_test.gen_targets()
