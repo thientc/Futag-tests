@@ -20,6 +20,6 @@ lib_test = Generator(
     ".",
     )
 lib_test.gen_targets()
-lib_test.compile_targets()
+lib_test.compile_targets(True, 16)
 
 print("-- [Futag]: fuzz-drivers are saved in LuaJIT/futag-fuzz-targets!")

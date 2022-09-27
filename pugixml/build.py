@@ -16,6 +16,6 @@ lib_test = Generator(
     "pugixml",
 )
 lib_test.gen_targets()
-lib_test.compile_targets()
+lib_test.compile_targets(True, 16)
 
 print("-- [Futag]: fuzz-drivers are saved in pugixml/futag-fuzz-targets!")

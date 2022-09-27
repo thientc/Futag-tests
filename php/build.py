@@ -10,7 +10,7 @@ from futag.sysmsg import *
 lib_test = Builder(
     "/home/futag/Futag-tests/futag-llvm-package/", 
     "php7",
-    COMPILER_FLAGS,
+    "-g -O0 -fsanitize=address",
     True,
     BUILD_PATH,
     INSTALL_PATH,
@@ -26,6 +26,6 @@ lib_test = Generator(
     "php7",
 )
 lib_test.gen_targets()
-lib_test.compile_targets()
+lib_test.compile_targets(True, 16)
 
 # print("-- [Futag]: fuzz-drivers are saved in json-c/futag-fuzz-targets!")
