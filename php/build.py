@@ -10,6 +10,13 @@ from futag.sysmsg import *
 lib_test = Builder(
     "../../futag-llvm-package/", 
     "php7",
+    COMPILER_FLAGS,
+    True,
+    BUILD_PATH,
+    INSTALL_PATH,
+    ANALYSIS_PATH,
+    16,
+    "--disable-zip --with-curl=shared --enable-exif=shared --with-gd=shared --enable-fileinfo=shared --enable-intl=shared --enable-mbstring=shared --enable-mbregex --with-openssl --with-mhash"
 )
 lib_test.auto_build()
 lib_test.analyze()
