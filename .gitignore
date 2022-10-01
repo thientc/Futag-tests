@@ -1,5 +1,8 @@
-futag-llvm-package
-futag-llvm-package.latest.tar.xz
+**/.svace-dir
+futag-llvm
+futag-llvm.latest.tar.xz
+
+libFuzzer/*
 
 json-c/json-c-0.16-20220414.tar.gz
 json-c/json-c
@@ -29,7 +32,9 @@ php/php7
 php/curl-7.85.0.tar.gz
 
 **/python-venv
-**/a.out
+**/*.profraw
+**/*.out
+**/*.o
 **/*.tar.gz
 .subfolder.tmp
 
