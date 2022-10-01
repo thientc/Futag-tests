@@ -8,7 +8,7 @@ from futag.generator import *
 from futag.sysmsg import * 
 
 lib_test = Builder(
-    "/home/futag/Futag-tests/futag-llvm-package/", 
+    "/home/futag/Futag-tests/futag-llvm/", 
     "json-c",
     COMPILER_FLAGS,
     True,
@@ -21,7 +21,7 @@ lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
-    "/home/futag/Futag-tests/futag-llvm-package/", 
+    "/home/futag/Futag-tests/futag-llvm/", 
     "json-c",
     )
 lib_test.gen_targets()

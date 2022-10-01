@@ -9,14 +9,14 @@ from futag.generator import *
 os.chdir("LuaJIT")
 
 lib_test = Builder(
-    "/home/futag/Futag-tests/futag-llvm-package/",
+    "/home/futag/Futag-tests/futag-llvm/",
     ".", 
 )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
-    "/home/futag/Futag-tests/futag-llvm-package/",
+    "/home/futag/Futag-tests/futag-llvm/",
     ".",
     )
 lib_test.gen_targets()

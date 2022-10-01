@@ -9,7 +9,7 @@ This repository is for testing [Futag](https://github.com/ispras/Futag) on libra
 
 - Install requirements:
 ```bash
-~/Futag-tests$ pip install -r futag-llvm-package/python-package/requirements.txt
+~/Futag-tests$ pip install -r futag-llvm/python-package/requirements.txt
 ```
 
 ## Testing library

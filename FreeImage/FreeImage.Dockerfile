@@ -19,7 +19,7 @@ WORKDIR /home/futag/Futag-tests
 RUN ./get-Futag.sh
 
 USER root
-RUN pip3 install futag-llvm-package/python-package/futag-1.1.tar.gz
+RUN pip3 install futag-llvm/python-package/futag-1.1.tar.gz
 
 USER futag 
 WORKDIR /home/futag/Futag-tests/FreeImage

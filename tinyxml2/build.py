@@ -5,14 +5,14 @@ from futag.preprocessor import *
 from futag.generator import * 
 
 lib_test = Builder(
-    "/home/futag/Futag-tests/futag-llvm-package/",
+    "/home/futag/Futag-tests/futag-llvm/",
     "tinyxml2", 
 )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
-    "/home/futag/Futag-tests/futag-llvm-package/",
+    "/home/futag/Futag-tests/futag-llvm/",
     "tinyxml2",
 )
 lib_test.gen_targets()

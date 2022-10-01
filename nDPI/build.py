@@ -11,7 +11,7 @@ from futag.generator import *
 from futag.sysmsg import * 
 os.chdir("nDPI")
 lib_test = Builder(
-    "/home/futag/Futag-tests/futag-llvm-package/",  
+    "/home/futag/Futag-tests/futag-llvm/",  
     ".",
     COMPILER_FLAGS,
     False, 
@@ -23,7 +23,7 @@ lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
-    "/home/futag/Futag-tests/futag-llvm-package/", 
+    "/home/futag/Futag-tests/futag-llvm/", 
     ".",
     ANALYSIS_FILE_PATH,
     FUZZ_DRIVER_PATH,
