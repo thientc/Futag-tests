@@ -22,9 +22,12 @@ lib_test.analyze()
 
 lib_test = Generator(
     "/home/futag/Futag-tests/futag-llvm/", 
-    "json-c",
-    )
+    "json-c", AFLPLUSPLUS, ANALYSIS_FILE_PATH, "futag-afl-targets")
 lib_test.gen_targets()
 lib_test.compile_targets(True, 16)
 
-# print("-- [Futag]: fuzz-drivers are saved in json-c/futag-fuzz-targets!")
+lib_test = Generator(
+    "/home/futag/Futag-tests/futag-llvm/", 
+    "json-c")
+lib_test.gen_targets()
+lib_test.compile_targets(True, 16)
