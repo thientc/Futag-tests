@@ -3,10 +3,10 @@
 
 from futag.preprocessor import *
 from futag.generator import * 
-FUTAG_PATH = "/home/futag/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
 lib_test = Builder(
      FUTAG_PATH,
-     "pugixml-1.12",
+     "pugixml",
      processes=16
  )
 lib_test.auto_build()
@@ -14,7 +14,7 @@ lib_test.analyze()
 
 lib_test = Generator(
     FUTAG_PATH,
-    "pugixml-1.12",
+    "pugixml",
 )
 lib_test.gen_targets()
 lib_test.compile_targets(16)

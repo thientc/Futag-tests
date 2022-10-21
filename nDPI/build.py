@@ -10,25 +10,21 @@ from futag.preprocessor import *
 from futag.generator import * 
 from futag.sysmsg import * 
 os.chdir("nDPI")
+FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+
 lib_test = Builder(
-    "/home/futag/Futag-tests/futag-llvm/",  
+    FUTAG_PATH,  
     ".",
-    COMPILER_FLAGS,
-    False, 
-    ".", 
-    INSTALL_PATH, 
-    ANALYSIS_PATH, 
+    clean=False, 
+    build_path=".", 
 )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
-    "/home/futag/Futag-tests/futag-llvm/", 
+    FUTAG_PATH, 
     ".",
-    ANALYSIS_FILE_PATH,
-    FUZZ_DRIVER_PATH,
-    ".",
-    INSTALL_PATH
+    build_path=".",
 )
 lib_test.gen_targets()
 lib_test.compile_targets()
