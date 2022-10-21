@@ -3,19 +3,20 @@
 
 from futag.preprocessor import *
 from futag.generator import * 
-
+FUTAG_PATH = "/home/futag/futag-llvm/"
 lib_test = Builder(
-    "/home/futag/Futag-tests/futag-llvm/",
-    "pugixml", 
-)
+     FUTAG_PATH,
+     "pugixml-1.12",
+     processes=16
+ )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
-    "/home/futag/Futag-tests/futag-llvm/",
-    "pugixml",
+    FUTAG_PATH,
+    "pugixml-1.12",
 )
 lib_test.gen_targets()
-lib_test.compile_targets(True, 16)
+lib_test.compile_targets(16)
 
 print("-- [Futag]: fuzz-drivers are saved in pugixml/futag-fuzz-targets!")

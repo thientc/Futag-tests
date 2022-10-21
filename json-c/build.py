@@ -7,27 +7,18 @@ from futag.preprocessor import *
 from futag.generator import * 
 from futag.sysmsg import * 
 
+FUTAG_PATH = "/home/futag/futag-llvm/"
+
 lib_test = Builder(
-    "/home/futag/Futag-tests/futag-llvm/", 
+    FUTAG_PATH, 
     "json-c",
-    COMPILER_FLAGS,
-    True,
-    BUILD_PATH,
-    INSTALL_PATH,
-    ANALYSIS_PATH,
-    16,
+    processes=16,
 )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
     "/home/futag/Futag-tests/futag-llvm/", 
-    "json-c", AFLPLUSPLUS, ANALYSIS_FILE_PATH, "futag-afl-targets")
-lib_test.gen_targets()
-lib_test.compile_targets(True, 16)
-
-lib_test = Generator(
-    "/home/futag/Futag-tests/futag-llvm/", 
     "json-c")
 lib_test.gen_targets()
-lib_test.compile_targets(True, 16)
+lib_test.compile_targets(16)

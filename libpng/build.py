@@ -10,18 +10,14 @@ from futag.sysmsg import *
 FUTAG_PATH = "/home/futag/futag-llvm/"
 
 lib_test = Builder(
-    FUTAG_PATH,
-    "php7",
-    flags="-g -O0 -fsanitize=address",
-    processes=16,
-    build_ex_params=" --with-curl=shared --enable-exif=shared --enable-fileinfo=shared --enable-intl=shared --enable-mbstring=shared --enable-mbregex --with-openssl --with-mhash"
+    FUTAG_PATH, 
+    "libpng-1.6.35",
 )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
     FUTAG_PATH,
-    "php7",
-)
+    "libpng-1.6.35")
 lib_test.gen_targets()
 lib_test.compile_targets(16)

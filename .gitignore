@@ -31,6 +31,8 @@ curl/curl-7.85.0.tar.gz
 php/php7
 php/curl-7.85.0.tar.gz
 
+libpng/libpng-1.6.35
+
 **/python-venv
 **/*.profraw
 **/*.out
@@ -39,3 +41,6 @@ php/curl-7.85.0.tar.gz
 .subfolder.tmp
 
 .vscode/
+FreeImage/build-new.py
+
+**/.*

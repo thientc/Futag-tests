@@ -7,19 +7,23 @@ from futag.preprocessor import *
 from futag.generator import * 
 
 os.chdir("LuaJIT")
+FUTAG_PATH = "/home/futag/futag-llvm/"
 
 lib_test = Builder(
-    "/home/futag/Futag-tests/futag-llvm/",
+    FUTAG_PATH,
     ".", 
+    COMPILER_FLAGS,
+    False,
+    ".", INSTALL_PATH, ANALYSIS_PATH, 16
 )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
-    "/home/futag/Futag-tests/futag-llvm/",
-    ".",
-    )
+    FUTAG_PATH,
+    ".",LIBFUZZER,ANALYSIS_FILE_PATH, FUZZ_DRIVER_PATH, "."
+)
 lib_test.gen_targets()
-lib_test.compile_targets(True, 16)
+lib_test.compile_targets(16)
 
-print("-- [Futag]: fuzz-drivers are saved in LuaJIT/futag-fuzz-targets!")
+# print("-- [Futag]: fuzz-drivers are saved in LuaJIT/futag-fuzz-targets!")

@@ -5,27 +5,19 @@ from futag.preprocessor import *
 from futag.generator import * 
 from futag.fuzzer import * 
 
-FUTAG_LLVM_PACKAGE_PATH = "/home/thientc/Futag/futag-llvm/"
+FUTAG_PATH = "/home/futag/futag-llvm/"
 
 lib_test = Builder(
-    FUTAG_LLVM_PACKAGE_PATH, 
+    FUTAG_PATH, 
     "libpq-standalone",
-    COMPILER_FLAGS,
-    True,
-    BUILD_PATH,
-    INSTALL_PATH,
-    ANALYSIS_PATH,
-    16
+    processes=16
 )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
-    FUTAG_LLVM_PACKAGE_PATH, 
+    FUTAG_PATH, 
     "libpq-standalone",
     )
 lib_test.gen_targets()
-lib_test.compile_targets(True, 16)
-
-lib_test = Fuzzer(FUTAG_LLVM_PACKAGE_PATH, "libpq-standalone/" + FUZZ_DRIVER_PATH,True, False, True, 4, 60)
-lib_test.fuzz()
+lib_test.compile_targets(16)
