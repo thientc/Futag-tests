@@ -11,15 +11,11 @@ FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
 lib_test = Builder(
     FUTAG_PATH, 
     ".",
-    COMPILER_FLAGS,
-    False,
-    ".",
-    INSTALL_PATH,
-    ANALYSIS_PATH,
-    16
-
+    clean=False,
+    build_path=".",
+    processes=16
 )
-# lib_test.auto_build()
+lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
@@ -29,5 +25,16 @@ lib_test = Generator(
 )
 lib_test.gen_targets()
 lib_test.compile_targets(16)
+
+from futag.fuzzer import * 
+
+fuzz = Fuzzer(
+    FUTAG_PATH,
+    "futag-fuzz-drivers",
+    fork=4,
+    totaltime=60,
+    debug=True
+)
+fuzz.fuzz()
 
 # print("-- [Futag]: fuzz-drivers are saved in FreeImage/futag-fuzz-targets!")

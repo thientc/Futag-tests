@@ -6,26 +6,22 @@ from futag.generator import *
 from futag.sysmsg import * 
 
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
-
+lib = "curl-7.85.0"
 lib_test = Builder(
     FUTAG_PATH,
-    "curl",
-    COMPILER_FLAGS,
-    True, 
-    BUILD_PATH, 
-    INSTALL_PATH, 
-    ANALYSIS_PATH, 
-    16,
-    "--with-ssl" 
+    lib,
+    clean=True, 
+    processes=16,
+    build_ex_params="--without-ssl" 
 )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
     FUTAG_PATH,
-    "curl",
+    lib,
 )
 lib_test.gen_targets()
-lib_test.compile_targets(16)
+lib_test.compile_targets(16, extra_include="-DHAVE_CONFIG_H")
 
 # print("-- [Futag]: fuzz-drivers are saved in curl/futag-fuzz-targets!")

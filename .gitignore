@@ -5,9 +5,11 @@ futag-llvm.latest.tar.xz
 libFuzzer/*
 
 json-c/json-c-0.16-20220414.tar.gz
+json-c/json-c-json-c-0.16-20220414*
 json-c/json-c
 
-libpq-standalone/libpq-standalone-REL_14_4.tar.gz
+libpq-standalone/libpq-standalone-REL_14_4
+libpq-standalone/libpq-standalone.poc
 libpq-standalone/libpq-standalone
 
 FreeImage/FreeImage
@@ -22,25 +24,36 @@ tinyxml2/9.0.0.tar.gz
 nDPI/nDPI
 nDPI/4.4.tar.gz
 
-pugixml/pugixml
+pugixml/pugixml*
 pugixml/pugixml-1.12.tar.gz
 
-curl/curl
+curl/curl-7.85.0
 curl/curl-7.85.0.tar.gz
 
 php/php7
-php/curl-7.85.0.tar.gz
+php/php-src-php-7.4.30
 
 libpng/libpng-1.6.35
 
+tinyxml2/tinyxml2-9.0.0
+
+openssl/openssl*
+
+libc++
+
+OpenCV/opencv-4.6.0
+Boost/boost_1_80_0
 **/python-venv
 **/*.profraw
 **/*.out
 **/*.o
 **/*.tar.gz
+**/*.tar.xz
 .subfolder.tmp
 
 .vscode/
 FreeImage/build-new.py
 
 **/.*
+**/warning_info*
+pytorch

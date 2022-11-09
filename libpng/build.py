@@ -8,16 +8,17 @@ from futag.generator import *
 from futag.sysmsg import * 
 
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
-
+lib = "libpng-1.6.35"
 lib_test = Builder(
     FUTAG_PATH, 
-    "libpng-1.6.35",
+    lib,
+    processes=8
 )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
     FUTAG_PATH,
-    "libpng-1.6.35")
+    lib)
 lib_test.gen_targets()
-lib_test.compile_targets(16)
+lib_test.compile_targets(8, extra_syslink=" -lm -lz -lm ")

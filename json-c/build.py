@@ -8,17 +8,18 @@ from futag.generator import *
 from futag.sysmsg import * 
 
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
-
+lib = "json-c-json-c-0.16-20220414"
 lib_test = Builder(
-    FUTAG_PATH, 
-    "json-c",
-    processes=16,
+   FUTAG_PATH, 
+   lib,
+   clean=True,
+   processes=8,
 )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
-    "/home/futag/Futag-tests/futag-llvm/", 
-    "json-c")
+    FUTAG_PATH, 
+    lib)
 lib_test.gen_targets()
-lib_test.compile_targets(16)
+lib_test.compile_targets(8)

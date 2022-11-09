@@ -3,20 +3,23 @@
 
 from futag.preprocessor import *
 from futag.generator import * 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+from futag.fuzzer import * 
 
+FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+lib = "tinyxml2-9.0.0"
 lib_test = Builder(
     FUTAG_PATH,
-    "tinyxml2", 
+    lib,
+    processes=8 
 )
 lib_test.auto_build()
 lib_test.analyze()
 
 lib_test = Generator(
     FUTAG_PATH,
-    "tinyxml2",
+    "tinyxml2-9.0.0",
 )
 lib_test.gen_targets()
-lib_test.compile_targets(16)
+lib_test.compile_targets(8)
 
 print("-- [Futag]: fuzz-drivers are saved in tinyxml2/futag-fuzz-targets!")

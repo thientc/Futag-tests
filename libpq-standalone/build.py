@@ -7,9 +7,10 @@ from futag.fuzzer import *
 
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
 
+lib = "libpq-standalone-REL_14_4"
 lib_test = Builder(
     FUTAG_PATH, 
-    "libpq-standalone",
+    lib,
     processes=16
 )
 lib_test.auto_build()
@@ -17,7 +18,7 @@ lib_test.analyze()
 
 lib_test = Generator(
     FUTAG_PATH, 
-    "libpq-standalone",
+    lib,
     )
 lib_test.gen_targets()
 lib_test.compile_targets(16)
