@@ -7,4 +7,6 @@ if [ ! -f openssl-1.1.1s.tar.gz ]; then
     wget https://www.openssl.org/source/openssl-1.1.1s.tar.gz
 fi
 tar xf openssl-1.1.1s.tar.gz
+cd openssl-1.1.1s
+./config
 echo "-- [Futag]: Run python build.py for generating fuzz-drivers."

@@ -20,7 +20,7 @@ RUN ./get-Futag.sh
 USER root
 RUN pip install futag-llvm/python-package/futag-1.2.tar.gz
 
-USER futag 
+# USER futag 
 WORKDIR /home/futag/Futag-tests/pugixml
 RUN ./prepare.sh
-RUN python3 build.py
+# RUN python3 build.py

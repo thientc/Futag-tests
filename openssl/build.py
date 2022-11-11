@@ -8,22 +8,22 @@ import os
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
 lib="openssl-1.1.1s"
 os.chdir(lib)
-lib_test = Builder(
-     FUTAG_PATH,
-     ".",
-     build_path=".",
-     processes=16
- )
-lib_test.auto_build()
-lib_test.analyze()
+# lib_test = Builder(
+#      FUTAG_PATH,
+#      ".",
+#      build_path=".",
+#      processes=16
+#  )
+# lib_test.auto_build()
+# lib_test.analyze()
 
-lib_test = Generator(
-    FUTAG_PATH,
-    ".",
-    build_path=".",
-)
-lib_test.gen_targets()
-lib_test.compile_targets(16)
+# lib_test = Generator(
+#     FUTAG_PATH,
+#     ".",
+#     build_path=".",
+# )
+# lib_test.gen_targets()
+# lib_test.compile_targets(16)
 
 fuzzer = Fuzzer(
     FUTAG_PATH,
@@ -33,4 +33,3 @@ fuzzer = Fuzzer(
     debug=True
 )
 fuzzer.fuzz()
-
