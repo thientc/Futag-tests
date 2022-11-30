@@ -4,7 +4,7 @@
 #Download base image ubuntu 20.04
 FROM ubuntu:20.04
 
-LABEL maintainer="thientc84@gmail.com"
+LABEL maintainer="thientcgithub@gmail.com"
 LABEL description="This is custom Docker Image based on Ubuntu 20.04 for testing Futag on curl."
 
 RUN apt update --fix-missing

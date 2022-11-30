@@ -4,7 +4,7 @@
 #Download base image ubuntu 20.04
 FROM ubuntu:20.04
 
-LABEL maintainer="thientc84@gmail.com"
+LABEL maintainer="thientcgithub@gmail.com"
 LABEL description="This is custom Docker Image based on Ubuntu 20.04 for testing Futag on php 7.4.30."
 
 RUN apt update --fix-missing
@@ -26,11 +26,6 @@ RUN ./get-Futag.sh
 
 USER root
 RUN pip3 install futag-llvm/python-package/futag-1.2.1.tar.gz
-
-RUN apt install -y software-properties-common
-RUN add-apt-repository ppa:ubuntu-toolchain-r/test
-RUN apt update
-RUN apt install -y gcc-9 g++-9
 
 WORKDIR /home/futag/Futag-tests/php
 RUN ./prepare.sh
