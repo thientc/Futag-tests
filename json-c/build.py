@@ -1,5 +1,3 @@
-#!/home/thientc/python-venv/bin/python
-
 # Futag-tests (https://github.com/thientc/Futag-tests): testing repository for Futag.
 # This file is distributed under the GPL v3 license (https://www.gnu.org/licenses/gpl-3.0.en.html).
 
@@ -8,18 +6,18 @@ from futag.generator import *
 from futag.sysmsg import * 
 
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
-lib = "json-c-json-c-0.16-20220414"
-lib_test = Builder(
+lib_path = "json-c-json-c-0.16-20220414"
+build_test = Builder(
    FUTAG_PATH, 
-   lib,
+   lib_path,
    clean=True,
-   processes=8,
+   processes=4,
 )
-lib_test.auto_build()
-lib_test.analyze()
+build_test.auto_build()
+build_test.analyze()
 
-lib_test = Generator(
+generator = Generator(
     FUTAG_PATH, 
-    lib)
-lib_test.gen_targets()
-lib_test.compile_targets(8)
+    lib_path)
+generator.gen_targets()
+generator.compile_targets(8)

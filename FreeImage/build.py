@@ -8,33 +8,23 @@ from futag.generator import *
 
 os.chdir("FreeImage")
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
-lib_test = Builder(
+lib_path = "."
+build_test = Builder(
     FUTAG_PATH, 
-    ".",
+    lib_path,
     clean=False,
-    build_path=".",
-    processes=16
+    build_path=lib_path,
+    processes=4
 )
-lib_test.auto_build()
-lib_test.analyze()
+build_test.auto_build()
+build_test.analyze()
 
-lib_test = Generator(
+generator = Generator(
     FUTAG_PATH, 
-    ".",
-    build_path=".",
+    lib_path,
+    build_path=lib_path,
 )
-lib_test.gen_targets()
-lib_test.compile_targets(16)
+generator.gen_targets()
+generator.compile_targets(4)
 
-from futag.fuzzer import * 
-
-fuzz = Fuzzer(
-    FUTAG_PATH,
-    "futag-fuzz-drivers",
-    fork=4,
-    totaltime=60,
-    debug=True
-)
-fuzz.fuzz()
-
-# print("-- [Futag]: fuzz-drivers are saved in FreeImage/futag-fuzz-targets!")
+print("-- [Futag]: fuzz-drivers are saved in FreeImage/futag-fuzz-targets!")

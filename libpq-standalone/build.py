@@ -11,7 +11,7 @@ lib = "libpq-standalone-REL_14_4"
 lib_test = Builder(
     FUTAG_PATH, 
     lib,
-    processes=16
+    processes=4
 )
 lib_test.auto_build()
 lib_test.analyze()
@@ -21,4 +21,4 @@ lib_test = Generator(
     lib,
     )
 lib_test.gen_targets()
-lib_test.compile_targets(16)
+lib_test.compile_targets(4)

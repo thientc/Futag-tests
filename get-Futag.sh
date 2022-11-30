@@ -15,8 +15,9 @@ echo "************************************************"
 echo ""
 
 echo "-- [Futag]: Getting latest Futag package."
-wget https://github.com/ispras/Futag/releases/download/latest/futag-llvm.latest.tar.xz
-
+if [ ! -f futag-llvm.latest.tar.xz ]; then
+    wget https://github.com/ispras/Futag/releases/download/latest/futag-llvm.latest.tar.xz
+fi
 echo "-- [Futag]: Extracting..."
 tar xf futag-llvm.latest.tar.xz
 echo "-- [Futag]: Futag package is extracted to futag-llvm folder!"

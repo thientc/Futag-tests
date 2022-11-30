@@ -5,20 +5,20 @@ from futag.preprocessor import *
 from futag.generator import * 
 
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
-lib = "opencv-4.6.0"
-lib_test = Builder(
+lib_path = "opencv-4.6.0"
+build_test = Builder(
      FUTAG_PATH,
-     lib,
-     processes=16
+     lib_path,
+     processes=4
  )
-lib_test.auto_build()
-lib_test.analyze()
+build_test.auto_build()
+build_test.analyze()
 
-lib_test = Generator(
+generator = Generator(
     FUTAG_PATH,
-    lib,
+    lib_path,
 )
-lib_test.gen_targets()
-lib_test.compile_targets(16)
+generator.gen_targets()
+generator.compile_targets(4)
 
-print("-- [Futag]: fuzz-drivers are saved in pugixml/futag-fuzz-targets!")
+print("-- [Futag]: fuzz-drivers are saved in opencv-4.6.0/futag-fuzz-targets!")

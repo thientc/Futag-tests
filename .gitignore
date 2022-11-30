@@ -40,6 +40,7 @@ tinyxml2/tinyxml2-9.0.0
 openssl/openssl*
 
 libc++
+libpqxx/libpqxx-7.7.4
 
 OpenCV/opencv-4.6.0
 Boost/boost_1_80_0

@@ -6,12 +6,12 @@ from futag.generator import *
 from futag.sysmsg import * 
 
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
-lib = "curl-7.85.0"
+lib_path = "curl-7.85.0"
 lib_test = Builder(
     FUTAG_PATH,
-    lib,
+    lib_path,
     clean=True, 
-    processes=16,
+    processes=4,
     build_ex_params="--without-ssl" 
 )
 lib_test.auto_build()
@@ -19,7 +19,7 @@ lib_test.analyze()
 
 lib_test = Generator(
     FUTAG_PATH,
-    lib,
+    lib_path,
 )
 lib_test.gen_targets()
 lib_test.compile_targets(16, extra_include="-DHAVE_CONFIG_H")

@@ -1,5 +1,3 @@
-#!/home/thientc/python-venv/bin/python
-
 # Futag-tests (https://github.com/thientc/Futag-tests): testing repository for Futag.
 # This file is distributed under the GPL v3 license (https://www.gnu.org/licenses/gpl-3.0.en.html).
 
@@ -8,21 +6,20 @@ from futag.generator import *
 from futag.sysmsg import * 
 
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
-lib = "php-src-php-7.4.30"
-lib_test = Builder(
+lib_path = "php-src-php-7.4.30"
+build_test = Builder(
     FUTAG_PATH,
-    lib,
+    lib_path,
     clean=False,
-    flags="-g -O0 -fsanitize=address",
-    processes=16,
-    build_ex_params=" --with-curl=shared --enable-exif=shared --enable-fileinfo=shared --enable-intl=shared --enable-mbstring=shared --enable-mbregex --with-openssl --with-mhash"
+    processes=4,
+    # build_ex_params=" --with-curl=shared --enable-exif=shared --enable-fileinfo=shared --enable-intl=shared --enable-mbstring=shared --enable-mbregex --with-openssl --with-mhash"
 )
-lib_test.auto_build()
-lib_test.analyze()
+build_test.auto_build()
+build_test.analyze()
 
-lib_test = Generator(
+generator = Generator(
     FUTAG_PATH,
-    lib,
+    lib_path,
 )
-lib_test.gen_targets()
-lib_test.compile_targets(16)
+generator.gen_targets()
+generator.compile_targets(4)

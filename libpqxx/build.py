@@ -6,18 +6,18 @@ from futag.generator import *
 from futag.fuzzer import * 
 
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
-lib = "libpqxx-7.7.4"
-lib_test = Builder(
+lib_path = "libpqxx-7.7.4"
+test_build = Builder(
     FUTAG_PATH, 
-    lib,
-    processes=16
+    lib_path,
+    processes=4
 )
-lib_test.auto_build()
-lib_test.analyze()
+test_build.auto_build()
+test_build.analyze()
 
-lib_test = Generator(
+generator = Generator(
     FUTAG_PATH, 
-    lib,
-    )
-lib_test.gen_targets()
-lib_test.compile_targets(16)
+    lib_path,
+)
+generator.gen_targets()
+generator.compile_targets(4)

@@ -6,20 +6,20 @@ from futag.generator import *
 from futag.fuzzer import * 
 
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
-lib = "tinyxml2-9.0.0"
-lib_test = Builder(
+lib_path = "tinyxml2-9.0.0"
+test_build = Builder(
     FUTAG_PATH,
-    lib,
+    lib_path,
     processes=8 
 )
-lib_test.auto_build()
-lib_test.analyze()
+test_build.auto_build()
+test_build.analyze()
 
-lib_test = Generator(
+generator = Generator(
     FUTAG_PATH,
-    "tinyxml2-9.0.0",
+    lib_path,
 )
-lib_test.gen_targets()
-lib_test.compile_targets(8)
+generator.gen_targets()
+generator.compile_targets(8)
 
 print("-- [Futag]: fuzz-drivers are saved in tinyxml2/futag-fuzz-targets!")

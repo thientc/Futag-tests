@@ -6,30 +6,22 @@ from futag.generator import *
 from futag.fuzzer import * 
 import os
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
-lib="openssl-1.1.1s"
-os.chdir(lib)
-# lib_test = Builder(
-#      FUTAG_PATH,
-#      ".",
-#      build_path=".",
-#      processes=16
-#  )
-# lib_test.auto_build()
-# lib_test.analyze()
 
-# lib_test = Generator(
-#     FUTAG_PATH,
-#     ".",
-#     build_path=".",
-# )
-# lib_test.gen_targets()
-# lib_test.compile_targets(16)
+os.chdir("openssl-1.1.1s")
+lib_path="."
+build_test = Builder(
+     FUTAG_PATH,
+     lib_path,
+     build_path=lib_path,
+     processes=4
+ )
+build_test.auto_build()
+build_test.analyze()
 
-fuzzer = Fuzzer(
+generator = Generator(
     FUTAG_PATH,
-    "futag-fuzz-drivers",
-    fork=4,
-    totaltime=30,
-    debug=True
+    lib_path,
+    build_path=lib_path,
 )
-fuzzer.fuzz()
+generator.gen_targets()
+generator.compile_targets(4)
