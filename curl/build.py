@@ -11,7 +11,7 @@ lib_test = Builder(
     FUTAG_PATH,
     lib_path,
     clean=True, 
-    processes=4,
+    processes=1,
     build_ex_params="--without-ssl" 
 )
 lib_test.auto_build()
