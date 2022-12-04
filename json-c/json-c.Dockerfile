@@ -8,6 +8,9 @@ LABEL maintainer="thientcgithub@gmail.com"
 LABEL description="This is custom Docker Image based on Ubuntu 20.04 for testing Futag."
 
 RUN apt update --fix-missing
+RUN export DEBIAN_FRONTEND=noninteractive
+RUN ln -fs /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+RUN apt-get install -y tzdata
 RUN apt install -y apt-utils libncurses5 gcc g++ make gdb openssh-client git wget xz-utils python3 python3-pip python-is-python3  nano cmake libtool
 RUN useradd -ms /bin/bash futag
 
