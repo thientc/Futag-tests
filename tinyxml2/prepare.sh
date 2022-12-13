@@ -7,4 +7,4 @@ if [ ! -f 9.0.0.tar.gz ]; then
     wget https://github.com/leethomason/tinyxml2/archive/refs/tags/9.0.0.tar.gz
 fi
 tar xf 9.0.0.tar.gz
-echo "-- [Futag]: Run python build.py for generating fuzz-drivers."
+echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."

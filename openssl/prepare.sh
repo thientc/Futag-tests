@@ -9,4 +9,4 @@ fi
 tar xf openssl-1.1.1s.tar.gz
 cd openssl-1.1.1s
 ./config
-echo "-- [Futag]: Run python build.py for generating fuzz-drivers."
+echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."

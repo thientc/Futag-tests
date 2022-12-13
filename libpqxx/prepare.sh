@@ -8,4 +8,4 @@ if [ ! -f 7.7.4.tar.gz ]; then
 fi
 
 tar xf 7.7.4.tar.gz
-echo "-- [Futag]: Run python build.py for generating fuzz-drivers."
+echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."

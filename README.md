@@ -21,7 +21,7 @@ For example:
 ```bash
 ~/Futag-tests$ cd json-c
 ~/Futag-tests/json-c$ ./prepare.sh
-~/Futag-tests/json-c$ python build.py
+~/Futag-tests/json-c$ python3 build.py
 ```
 ## Testing all libraries
 - Run script test-libs.sh for testing all libraries in repository.

@@ -9,4 +9,4 @@ fi
 
 unzip FreeImage3180.zip
 
-echo "-- [Futag]: Run python build.py for generating fuzz-drivers."
+echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."

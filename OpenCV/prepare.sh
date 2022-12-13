@@ -7,4 +7,4 @@ if [ ! -f 4.6.0.tar.gz ]; then
     wget https://github.com/opencv/opencv/archive/refs/tags/4.6.0.tar.gz
 fi
 tar xf 4.6.0.tar.gz
-echo "-- [Futag]: Run python build.py for generating fuzz-drivers."
+echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."

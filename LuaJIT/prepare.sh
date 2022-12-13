@@ -7,4 +7,4 @@ wget https://luajit.org/download/LuaJIT-2.1.0-beta3.tar.gz
 
 tar xf LuaJIT-2.1.0-beta3.tar.gz
 mv LuaJIT-2.1.0-beta3 LuaJIT
-echo "-- [Futag]: Run python build.py for generating fuzz-drivers."
+echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."

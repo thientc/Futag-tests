@@ -22,6 +22,6 @@ lib_test = Generator(
     lib_path,
 )
 lib_test.gen_targets()
-lib_test.compile_targets(16, extra_include="-DHAVE_CONFIG_H")
+lib_test.compile_targets(16, keep_failed=True, extra_include="-DHAVE_CONFIG_H")
 
 # print("-- [Futag]: fuzz-drivers are saved in curl/futag-fuzz-targets!")

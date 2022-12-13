@@ -9,4 +9,4 @@ if [ ! -f pugixml-1.12.tar.gz ]; then
 fi
 tar xf pugixml-1.12.tar.gz
 
-echo "-- [Futag]: Run python build.py for generating fuzz-drivers."
+echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."

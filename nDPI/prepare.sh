@@ -8,4 +8,4 @@ tar xf 4.4.tar.gz
 mv nDPI-4.4 nDPI
 cd nDPI
 ./autogen.sh
-echo "-- [Futag]: Run python build.py for generating fuzz-drivers."
+echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."

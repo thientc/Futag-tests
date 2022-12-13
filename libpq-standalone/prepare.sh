@@ -7,4 +7,4 @@ if [ ! -f libpq-standalone-REL_15_1.tar.gz ]; then
     wget https://gitlab.com/sabelka/libpq-standalone/-/archive/REL_15_1/libpq-standalone-REL_15_1.tar.gz
 fi
 tar xf libpq-standalone-REL_15_1.tar.gz
-echo "-- [Futag]: Run python build.py for generating fuzz-drivers."
+echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."

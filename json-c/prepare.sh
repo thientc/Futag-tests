@@ -9,4 +9,4 @@ if [ ! -f json-c-0.16-20220414.tar.gz ]; then
 fi
 tar xf json-c-0.16-20220414.tar.gz
 
-echo "-- [Futag]: Run python build.py for generating fuzz-drivers."
+echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."

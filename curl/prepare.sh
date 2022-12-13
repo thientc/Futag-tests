@@ -7,4 +7,4 @@ if [ ! -f curl-7.85.0.tar.gz ]; then
     wget https://curl.se/download/curl-7.85.0.tar.gz
 fi
 tar xf curl-7.85.0.tar.gz
-echo "-- [Futag]: Run python build.py for generating fuzz-drivers."
+echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."

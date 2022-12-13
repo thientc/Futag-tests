@@ -7,4 +7,4 @@ if [ ! -f v1.6.35.tar.gz ]; then
     wget https://github.com/glennrp/libpng/archive/refs/tags/v1.6.35.tar.gz
 fi
 tar xf v1.6.35.tar.gz
-echo "-- [Futag]: Run python build.py for generating fuzz-drivers."
+echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."
