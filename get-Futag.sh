@@ -14,10 +14,10 @@ echo "*    This script prepares  testing libraries   *"
 echo "************************************************"
 echo ""
 
-echo "-- [Futag]: Getting latest Futag package."
-if [ ! -f futag-llvm.latest.tar.xz ]; then
-    wget https://github.com/ispras/Futag/releases/download/latest/futag-llvm.latest.tar.xz
+echo "-- [Futag]: Getting stable Futag package."
+if [ ! -f futag-llvm.stable.tar.xz ]; then
+    wget https://github.com/ispras/Futag/releases/download/stable/futag-llvm.stable.tar.xz
 fi
 echo "-- [Futag]: Extracting..."
-tar xf futag-llvm.latest.tar.xz
+tar xf futag-llvm.stable.tar.xz
 echo "-- [Futag]: Futag package is extracted to futag-llvm folder!"
