@@ -7,26 +7,25 @@ from futag.generator import *
 from futag.sysmsg import * 
 from futag.fuzzer import * 
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm/"
 lib_path = "json-c-json-c-0.16-20220414"
 build_test = Builder(
    FUTAG_PATH, 
    lib_path,
-   clean=False,
-   processes=4,
+   clean=True,
+   processes=16,
 )
 build_test.auto_build()
 build_test.analyze()
 
 generator = Generator(
     FUTAG_PATH, 
-    lib_path)
-generator.gen_targets()
-generator.compile_targets(keep_failed=True)
+    lib_path, 
+    # target_type=AFLPLUSPLUS
+)
 
-fuzzer = Fuzzer(
-    FUTAG_PATH,
-    fuzz_driver_path="json-c-json-c-0.16-20220414/futag-fuzz-drivers/succeeded",
-    totaltime=1,
-    coverage=True
+generator.gen_targets()
+generator.compile_targets(
+    coverage=True,
+    keep_failed=True,
 )

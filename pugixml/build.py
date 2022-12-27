@@ -8,10 +8,10 @@ FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
 lib_path = "pugixml-1.12"
 
 test_build = Builder(
-     FUTAG_PATH,
-     lib_path,
-     processes=4
- )
+    FUTAG_PATH,
+    lib_path,
+    processes=4
+)
 test_build.auto_build()
 test_build.analyze()
 
