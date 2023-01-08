@@ -16,8 +16,8 @@ echo ""
 
 echo "-- [Futag]: Getting stable Futag package."
 if [ ! -f futag-llvm.stable.tar.xz ]; then
-    wget https://github.com/ispras/Futag/releases/download/1.2.2/futag-llvm.1.2.2.tar.xz
+    wget https://github.com/ispras/Futag/releases/download/1.3/futag-llvm.1.3.tar.xz
 fi
 echo "-- [Futag]: Extracting..."
-tar xf futag-llvm.1.2.2.tar.xz
+tar xf futag-llvm.1.3.tar.xz
 echo "-- [Futag]: Futag package is extracted to futag-llvm folder!"

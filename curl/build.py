@@ -11,7 +11,7 @@ lib_test = Builder(
     FUTAG_PATH,
     lib_path,
     clean=True, 
-    processes=1,
+    processes=16,
     build_ex_params="--without-ssl" 
 )
 lib_test.auto_build()
@@ -22,6 +22,9 @@ lib_test = Generator(
     lib_path,
 )
 lib_test.gen_targets()
-lib_test.compile_targets(16, keep_failed=True, extra_include="-DHAVE_CONFIG_H")
+lib_test.compile_targets(16, keep_failed=True, 
+    extra_include="-DHAVE_CONFIG_H",
+    extra_dynamiclink="-lgsasl -lpsl -lldap -lbrotlidec -lz -lidn2 -llber"
+)
 
 # print("-- [Futag]: fuzz-drivers are saved in curl/futag-fuzz-targets!")

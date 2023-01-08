@@ -12,8 +12,9 @@ lib_path="."
 build_test = Builder(
      FUTAG_PATH,
      lib_path,
+     clean=False,
      build_path=lib_path,
-     processes=4
+     processes=16
  )
 build_test.auto_build()
 build_test.analyze()
@@ -24,4 +25,4 @@ generator = Generator(
     build_path=lib_path,
 )
 generator.gen_targets()
-generator.compile_targets(4)
+generator.compile_targets(workers=16, keep_failed=True)

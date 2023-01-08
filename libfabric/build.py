@@ -4,22 +4,21 @@
 from futag.preprocessor import *
 from futag.generator import * 
 from futag.fuzzer import * 
-
+import os
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
 
-lib_path = "libpq-standalone-REL_15_1"
+lib_path="libfabric-1.17.0"
 build_test = Builder(
-    FUTAG_PATH,
-    lib_path,
-    clean=True,
-    processes=8
-)
+     FUTAG_PATH,
+     lib_path,
+     processes=16
+ )
 build_test.auto_build()
 build_test.analyze()
 
 generator = Generator(
-    FUTAG_PATH, 
+    FUTAG_PATH,
     lib_path,
 )
 generator.gen_targets()
-generator.compile_targets(workers=4, keep_failed=True)
+generator.compile_targets(workers=8, keep_failed=True)

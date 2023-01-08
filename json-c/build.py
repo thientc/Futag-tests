@@ -2,12 +2,11 @@
 # This file is distributed under the GPL v3 license (https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 from futag.preprocessor import *
-# from futag.wrapper import * 
 from futag.generator import * 
 from futag.sysmsg import * 
 from futag.fuzzer import * 
 
-FUTAG_PATH = "/home/futag/Futag/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
 lib_path = "json-c-json-c-0.16-20220414"
 build_test = Builder(
    FUTAG_PATH, 
@@ -21,11 +20,10 @@ build_test.analyze()
 generator = Generator(
     FUTAG_PATH, 
     lib_path, 
-    # target_type=AFLPLUSPLUS
 )
 
 generator.gen_targets()
 generator.compile_targets(
-    coverage=True,
+    # coverage=True,
     keep_failed=True,
 )

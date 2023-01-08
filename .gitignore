@@ -58,3 +58,8 @@ FreeImage/build-new.py
 **/.*
 **/warning_info*
 pytorch
+
+libfabric/libfabric-1.17.0
+libgit2/libgit2-1.5.0
+librdkafka/librdkafka-1.9.2
+libvips/libvips-8.14.0
