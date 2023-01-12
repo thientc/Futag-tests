@@ -1,0 +1,111 @@
+{
+    "function_qualified_name": "json_parse_uint64",
+    "location": "",
+    "module": "/home/user/tst/json/test_util_file",
+    "callstack": [
+        [
+            {
+                "function_name": "json_tokener_parse_ex",
+                "location": ""
+            },
+            {
+                "function_name": "json_object_from_fd_ex",
+                "location": ""
+            },
+            {
+                "function_name": "json_object_from_fd",
+                "location": ""
+            },
+            {
+                "function_name": "json_object_from_file",
+                "location": ""
+            },
+            {
+                "function_name": "test_read_fd_equal",
+                "location": ""
+            },
+            {
+                "function_name": "main",
+                "location": ""
+            },
+            {
+                "function_name": "_start",
+                "location": ""
+            }
+        ],
+        [
+            {
+                "function_name": "json_tokener_parse_ex",
+                "location": ""
+            },
+            {
+                "function_name": "json_object_from_fd_ex",
+                "location": ""
+            },
+            {
+                "function_name": "json_object_from_fd",
+                "location": ""
+            },
+            {
+                "function_name": "test_read_fd_equal",
+                "location": ""
+            },
+            {
+                "function_name": "main",
+                "location": ""
+            },
+            {
+                "function_name": "_start",
+                "location": ""
+            }
+        ],
+        [
+            {
+                "function_name": "json_tokener_parse_ex",
+                "location": ""
+            },
+            {
+                "function_name": "json_object_from_fd_ex",
+                "location": ""
+            },
+            {
+                "function_name": "json_object_from_fd",
+                "location": ""
+            },
+            {
+                "function_name": "test_read_valid_with_fd",
+                "location": ""
+            },
+            {
+                "function_name": "main",
+                "location": ""
+            },
+            {
+                "function_name": "_start",
+                "location": ""
+            }
+        ],
+        [
+            {
+                "function_name": "json_tokener_parse_ex",
+                "location": ""
+            },
+            {
+                "function_name": "json_object_from_fd_ex",
+                "location": ""
+            },
+            {
+                "function_name": "test_read_valid_nested_with_fd",
+                "location": ""
+            },
+            {
+                "function_name": "main",
+                "location": ""
+            },
+            {
+                "function_name": "_start",
+                "location": ""
+            }
+        ]
+    ]
+}

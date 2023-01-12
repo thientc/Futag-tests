@@ -63,3 +63,6 @@ libfabric/libfabric-1.17.0
 libgit2/libgit2-1.5.0
 librdkafka/librdkafka-1.9.2
 libvips/libvips-8.14.0
+
+_GenFromCallStack/pugixml-1.12
+_GenFromCallStack/json-c-json-c-0.16-20220414

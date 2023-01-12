@@ -1,0 +1,67 @@
+{
+    "function_qualified_name": "_nc_screen_of",
+    "location": "./obj-wide/ncurses/../../ncurses/base/lib_addch.c:268",
+    "module": "/media/george/ssd500/vms/debian11/debian-test/libs/src/libncursesw.so.6",
+    "callstack": [
+        [
+            {
+                "function_name": "_nc_waddch_nosync",
+                "location": "./obj-wide/ncurses/../../ncurses/base/lib_addstr.c:70"
+            },
+            {
+                "function_name": "wmove",
+                "location": "/nano-7.1/src/winio.c:2552"
+            },
+            {
+                "function_name": "display_string",
+                "location": "/nano-7.1/src/winio.c:2826"
+            },
+            {
+                "function_name": "update_line",
+                "location": "/nano-7.1/src/winio.c:0"
+            },
+            {
+                "function_name": "bottombars",
+                "location": "/nano-7.1/src/nano.c:2580"
+            },
+            {
+                "function_name": "__libc_start_main",
+                "location": ""
+            },
+            {
+                "function_name": "_start",
+                "location": ""
+            }
+        ],
+        [
+            {
+                "function_name": "strlen",
+                "location": "./obj-wide/ncurses/../../ncurses/base/lib_addstr.c:63"
+            },
+            {
+                "function_name": "wmove",
+                "location": "/nano-7.1/src/winio.c:2552"
+            },
+            {
+                "function_name": "display_string",
+                "location": "/nano-7.1/src/winio.c:2826"
+            },
+            {
+                "function_name": "update_line",
+                "location": "/nano-7.1/src/winio.c:0"
+            },
+            {
+                "function_name": "bottombars",
+                "location": "/nano-7.1/src/nano.c:2580"
+            },
+            {
+                "function_name": "__libc_start_main",
+                "location": ""
+            },
+            {
+                "function_name": "_start",
+                "location": ""
+            }
+        ]
+    ]
+}
