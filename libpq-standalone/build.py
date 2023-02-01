@@ -12,7 +12,7 @@ build_test = Builder(
     FUTAG_PATH,
     lib_path,
     clean=True,
-    processes=8
+    processes=16
 )
 build_test.auto_build()
 build_test.analyze()
@@ -22,4 +22,12 @@ generator = Generator(
     lib_path,
 )
 generator.gen_targets()
-generator.compile_targets(workers=4, keep_failed=True)
+generator.compile_targets(workers=16, keep_failed=True)
+
+fuzzer = Fuzzer( # модуль для фаззинга
+    FUTAG_PATH,
+    fuzz_driver_path="libpq-standalone-REL_15_1/futag-fuzz-drivers/", 
+    totaltime=10, # время фаззинга одной обертки
+    fork=4
+)
+fuzzer.fuzz() # функция для запуска фаззинга
