@@ -1,0 +1,7 @@
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/array_match_key_prefix_nc_klen/array_match_key_prefix_nc_klen1/array_match_key_prefix_nc_klen1.c:40:5: warning: ignoring return value of function declared with pure attribute [-Wunused-value]
+    array_match_key_prefix_nc_klen(s__a ,str_s ,q_b__slen );
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+/usr/bin/ld: /tmp/array_match_key_prefix_nc_klen1-4e073d.o: in function `LLVMFuzzerTestOneInput':
+array_match_key_prefix_nc_klen1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x25b): undefined reference to `array_init'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

@@ -21,4 +21,3 @@ fi
 echo "-- [Futag]: Extracting..."
 tar xf futag-llvm.1.3.1.tar.xz
 echo "-- [Futag]: Futag package is extracted to futag-llvm folder!"
-]``

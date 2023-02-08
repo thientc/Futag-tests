@@ -1,0 +1,4 @@
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/http_status_append/http_status_append3/http_status_append3.c:22:24: error: use of undeclared identifier 's__b'
+    http_status_append(s__b ,q_b__status );
+                       ^
+1 error generated.

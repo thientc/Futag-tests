@@ -1,0 +1,10 @@
+In file included from /home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/sock_addr_inet_ntop_append_buffer/sock_addr_inet_ntop_append_buffer2/sock_addr_inet_ntop_append_buffer2.c:8:
+In file included from /home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/src/sock_addr.h:6:
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/src/sys-socket.h:38:13: error: typedef redefinition with different types ('int' vs '__socklen_t' (aka 'unsigned int'))
+typedef int socklen_t;
+            ^
+/usr/include/x86_64-linux-gnu/bits/socket.h:33:21: note: previous definition is here
+typedef __socklen_t socklen_t;
+                    ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2 errors generated.

@@ -1,0 +1,3 @@
+/usr/bin/ld: /tmp/li_tohex_lc1-04cada.o: in function `LLVMFuzzerTestOneInput':
+li_tohex_lc1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x39b): undefined reference to `li_tohex_lc'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

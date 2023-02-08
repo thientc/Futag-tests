@@ -1,0 +1,4 @@
+/usr/bin/ld: /tmp/fdlog_flushall1-028128.o: in function `LLVMFuzzerTestOneInput':
+fdlog_flushall1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x38c): undefined reference to `fdlog_init'
+/usr/bin/ld: fdlog_flushall1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x39f): undefined reference to `fdlog_flushall'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

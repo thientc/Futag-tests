@@ -1,0 +1,11 @@
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/burl_append/burl_append1/burl_append1.c:21:21: warning: implicit declaration of function 'chunk_buffer_acquire' is invalid in C99 [-Wimplicit-function-declaration]
+    buffer * s__b = chunk_buffer_acquire();
+                    ^
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/burl_append/burl_append1/burl_append1.c:21:14: warning: incompatible integer to pointer conversion initializing 'buffer *' with an expression of type 'int' [-Wint-conversion]
+    buffer * s__b = chunk_buffer_acquire();
+             ^      ~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+/usr/bin/ld: /tmp/burl_append1-1328f8.o: in function `LLVMFuzzerTestOneInput':
+burl_append1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1e4): undefined reference to `chunk_buffer_acquire'
+/usr/bin/ld: burl_append1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x3ac): undefined reference to `burl_append'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

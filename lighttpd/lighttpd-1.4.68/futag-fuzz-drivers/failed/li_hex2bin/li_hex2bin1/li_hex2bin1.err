@@ -1,0 +1,3 @@
+/usr/bin/ld: /tmp/li_hex2bin1-09aec8.o: in function `LLVMFuzzerTestOneInput':
+li_hex2bin1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x3cd): undefined reference to `li_hex2bin'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

@@ -1,0 +1,4 @@
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/hex2int/hex2int1/hex2int1.c:19:5: warning: ignoring return value of function declared with const attribute [-Wunused-value]
+    hex2int(b_hex );
+    ^~~~~~~ ~~~~~
+1 warning generated.

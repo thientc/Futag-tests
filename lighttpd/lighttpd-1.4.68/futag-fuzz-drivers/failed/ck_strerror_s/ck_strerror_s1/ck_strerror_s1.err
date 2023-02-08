@@ -1,0 +1,3 @@
+/usr/bin/ld: /tmp/ck_strerror_s1-cf7fa6.o: in function `LLVMFuzzerTestOneInput':
+ck_strerror_s1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x3c5): undefined reference to `ck_strerror_s'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

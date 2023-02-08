@@ -1,0 +1,6 @@
+In file included from /home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/pcre_keyvalue_burl_normalize_key/pcre_keyvalue_burl_normalize_key4/pcre_keyvalue_burl_normalize_key4.c:11:
+/usr/include/pcre2.h:971:2: error: PCRE2_CODE_UNIT_WIDTH must be defined before including pcre2.h.
+#error PCRE2_CODE_UNIT_WIDTH must be defined before including pcre2.h.
+ ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2 errors generated.

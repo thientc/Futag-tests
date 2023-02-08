@@ -1,0 +1,14 @@
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/burl_normalize/burl_normalize2/burl_normalize2.c:16:21: warning: implicit declaration of function 'chunk_buffer_acquire' is invalid in C99 [-Wimplicit-function-declaration]
+    buffer * s__b = chunk_buffer_acquire();
+                    ^
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/burl_normalize/burl_normalize2/burl_normalize2.c:16:14: warning: incompatible integer to pointer conversion initializing 'buffer *' with an expression of type 'int' [-Wint-conversion]
+    buffer * s__b = chunk_buffer_acquire();
+             ^      ~~~~~~~~~~~~~~~~~~~~~~
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/burl_normalize/burl_normalize2/burl_normalize2.c:21:5: error: use of undeclared identifier 'http_method_t'
+    http_method_t e_2_i = e_2_i_enum_index % 41;
+    ^
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/burl_normalize/burl_normalize2/burl_normalize2.c:23:27: warning: implicit declaration of function 'http_method_buf' is invalid in C99 [-Wimplicit-function-declaration]
+    const buffer * s__t = http_method_buf(e_2_i);
+                          ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+3 warnings and 2 errors generated.

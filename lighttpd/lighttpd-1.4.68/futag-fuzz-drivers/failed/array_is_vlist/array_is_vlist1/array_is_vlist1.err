@@ -1,0 +1,7 @@
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/array_is_vlist/array_is_vlist1/array_is_vlist1.c:21:5: warning: ignoring return value of function declared with pure attribute [-Wunused-value]
+    array_is_vlist(s__a );
+    ^~~~~~~~~~~~~~ ~~~~
+1 warning generated.
+/usr/bin/ld: /tmp/array_is_vlist1-e9f901.o: in function `LLVMFuzzerTestOneInput':
+array_is_vlist1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1d9): undefined reference to `array_init'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

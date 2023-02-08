@@ -1,0 +1,11 @@
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/http_version_append/http_version_append2/http_version_append2.c:28:25: warning: passing 'const buffer *' to parameter of type 'buffer *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    http_version_append(s__b ,q_e__version );
+                        ^~~~
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/src/http_kv.h:91:34: note: passing argument to parameter 'b' here
+void http_version_append(buffer *b, http_version_t version);
+                                 ^
+1 warning generated.
+/usr/bin/ld: /tmp/http_version_append2-9a1289.o: in function `LLVMFuzzerTestOneInput':
+http_version_append2.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1ee): undefined reference to `http_method_buf'
+/usr/bin/ld: http_version_append2.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x27b): undefined reference to `http_version_append'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

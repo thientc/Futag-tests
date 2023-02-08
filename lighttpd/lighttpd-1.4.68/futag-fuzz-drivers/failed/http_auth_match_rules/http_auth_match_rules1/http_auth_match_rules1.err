@@ -1,0 +1,7 @@
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/http_auth_match_rules/http_auth_match_rules1/http_auth_match_rules1.c:53:5: warning: ignoring return value of function declared with pure attribute [-Wunused-value]
+    http_auth_match_rules(s__require ,str_user ,str_group ,str_host );
+    ^~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+/usr/bin/ld: /tmp/http_auth_match_rules1-97688b.o: in function `LLVMFuzzerTestOneInput':
+http_auth_match_rules1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x509): undefined reference to `http_auth_require_init'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

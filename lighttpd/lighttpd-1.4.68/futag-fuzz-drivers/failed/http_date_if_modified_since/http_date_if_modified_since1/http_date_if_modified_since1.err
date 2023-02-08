@@ -1,0 +1,10 @@
+In file included from /home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/http_date_if_modified_since/http_date_if_modified_since1/http_date_if_modified_since1.c:7:
+In file included from /home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/src/http_date.h:11:
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/src/sys-time.h:37:1: error: static declaration of 'timegm' follows non-static declaration
+timegm (const struct tm * const tm);
+^
+/usr/include/time.h:249:15: note: previous declaration is here
+extern time_t timegm (struct tm *__tp) __THROW;
+              ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2 errors generated.

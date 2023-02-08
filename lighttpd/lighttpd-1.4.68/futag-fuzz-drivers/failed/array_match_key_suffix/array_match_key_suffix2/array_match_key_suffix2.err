@@ -1,0 +1,8 @@
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/array_match_key_suffix/array_match_key_suffix2/array_match_key_suffix2.c:24:5: error: use of undeclared identifier 'http_method_t'
+    http_method_t e_2_i = e_2_i_enum_index % 41;
+    ^
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/array_match_key_suffix/array_match_key_suffix2/array_match_key_suffix2.c:26:27: warning: implicit declaration of function 'http_method_buf' is invalid in C99 [-Wimplicit-function-declaration]
+    const buffer * s__b = http_method_buf(e_2_i);
+                          ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+1 warning and 2 errors generated.

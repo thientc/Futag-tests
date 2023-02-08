@@ -1,0 +1,4 @@
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/chunk_buffer_prepare_append/chunk_buffer_prepare_append3/chunk_buffer_prepare_append3.c:30:33: error: use of undeclared identifier 's__b'
+    chunk_buffer_prepare_append(s__b ,b_sz );
+                                ^
+1 error generated.

@@ -1,0 +1,3 @@
+/usr/bin/ld: /tmp/ck_malloc1-c334e9.o: in function `LLVMFuzzerTestOneInput':
+ck_malloc1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1a7): undefined reference to `ck_malloc'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

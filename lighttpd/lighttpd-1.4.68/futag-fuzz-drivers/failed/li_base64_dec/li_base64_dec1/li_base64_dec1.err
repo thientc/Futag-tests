@@ -1,0 +1,3 @@
+/usr/bin/ld: /tmp/li_base64_dec1-4ddcd7.o: in function `LLVMFuzzerTestOneInput':
+li_base64_dec1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x450): undefined reference to `li_base64_dec'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

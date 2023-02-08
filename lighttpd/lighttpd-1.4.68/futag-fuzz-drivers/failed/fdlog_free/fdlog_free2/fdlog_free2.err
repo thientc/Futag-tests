@@ -1,0 +1,4 @@
+/usr/bin/ld: /tmp/fdlog_free2-c8c367.o: in function `LLVMFuzzerTestOneInput':
+fdlog_free2.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x2ae): undefined reference to `fdlog_open'
+/usr/bin/ld: fdlog_free2.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x2c1): undefined reference to `fdlog_free'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

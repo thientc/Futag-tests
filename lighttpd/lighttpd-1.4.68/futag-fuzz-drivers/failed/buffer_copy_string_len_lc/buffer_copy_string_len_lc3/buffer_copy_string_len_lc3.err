@@ -1,0 +1,4 @@
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/buffer_copy_string_len_lc/buffer_copy_string_len_lc3/buffer_copy_string_len_lc3.c:31:31: error: use of undeclared identifier 's__b'
+    buffer_copy_string_len_lc(s__b ,p_q_b__s ,q_b__len );
+                              ^
+1 error generated.

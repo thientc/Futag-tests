@@ -1,0 +1,4 @@
+/usr/bin/ld: /tmp/array_get_int_ptr1-7f54a3.o: in function `LLVMFuzzerTestOneInput':
+array_get_int_ptr1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x25b): undefined reference to `array_init'
+/usr/bin/ld: array_get_int_ptr1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x3f2): undefined reference to `array_get_int_ptr'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

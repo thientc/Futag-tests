@@ -6,7 +6,7 @@ from futag.generator import *
 from futag.sysmsg import * 
 from futag.fuzzer import * 
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/product-tests/futag-llvm"
 lib_path = "json-c-json-c-0.16-20220414"
 build_test = Builder(
    FUTAG_PATH, 
@@ -17,13 +17,13 @@ build_test = Builder(
 build_test.auto_build()
 build_test.analyze()
 
-generator = Generator(
-    FUTAG_PATH, 
-    lib_path, 
-)
+# generator = Generator(
+#     FUTAG_PATH, 
+#     lib_path, 
+# )
 
-generator.gen_targets()
-generator.compile_targets(
-    # coverage=True,
-    keep_failed=True,
-)
+# generator.gen_targets()
+# generator.compile_targets(
+#     # coverage=True,
+#     keep_failed=True,
+# )

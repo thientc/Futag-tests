@@ -1,0 +1,13 @@
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/http_etag_matches/http_etag_matches1/http_etag_matches1.c:22:24: warning: implicit declaration of function 'chunk_buffer_acquire' is invalid in C99 [-Wimplicit-function-declaration]
+    buffer * s__etag = chunk_buffer_acquire();
+                       ^
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/http_etag_matches/http_etag_matches1/http_etag_matches1.c:22:14: warning: incompatible integer to pointer conversion initializing 'buffer *' with an expression of type 'int' [-Wint-conversion]
+    buffer * s__etag = chunk_buffer_acquire();
+             ^         ~~~~~~~~~~~~~~~~~~~~~~
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/http_etag_matches/http_etag_matches1/http_etag_matches1.c:34:5: warning: ignoring return value of function declared with pure attribute [-Wunused-value]
+    http_etag_matches(s__etag ,str_s ,sz__weak_ok );
+    ^~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+/usr/bin/ld: /tmp/http_etag_matches1-a609ed.o: in function `LLVMFuzzerTestOneInput':
+http_etag_matches1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1ad): undefined reference to `chunk_buffer_acquire'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

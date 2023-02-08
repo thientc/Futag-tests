@@ -1,0 +1,14 @@
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/array_match_key_suffix/array_match_key_suffix1/array_match_key_suffix1.c:22:21: warning: implicit declaration of function 'chunk_buffer_acquire' is invalid in C99 [-Wimplicit-function-declaration]
+    buffer * s__b = chunk_buffer_acquire();
+                    ^
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/array_match_key_suffix/array_match_key_suffix1/array_match_key_suffix1.c:22:14: warning: incompatible integer to pointer conversion initializing 'buffer *' with an expression of type 'int' [-Wint-conversion]
+    buffer * s__b = chunk_buffer_acquire();
+             ^      ~~~~~~~~~~~~~~~~~~~~~~
+/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/array_match_key_suffix/array_match_key_suffix1/array_match_key_suffix1.c:24:5: warning: ignoring return value of function declared with pure attribute [-Wunused-value]
+    array_match_key_suffix(s__a ,s__b );
+    ^~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+3 warnings generated.
+/usr/bin/ld: /tmp/array_match_key_suffix1-f4db4c.o: in function `LLVMFuzzerTestOneInput':
+array_match_key_suffix1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1d9): undefined reference to `array_init'
+/usr/bin/ld: array_match_key_suffix1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1e7): undefined reference to `chunk_buffer_acquire'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
