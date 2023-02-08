@@ -1,3 +1,0 @@
-/usr/bin/ld: /tmp/fdlog_pipes_waitpid_cb1-d3c941.o: in function `LLVMFuzzerTestOneInput':
-fdlog_pipes_waitpid_cb1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1e5): undefined reference to `fdlog_pipes_waitpid_cb'
-clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

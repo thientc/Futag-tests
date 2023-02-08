@@ -1,4 +1,0 @@
-/usr/bin/ld: /tmp/fdlog_files_flush2-6eed97.o: in function `LLVMFuzzerTestOneInput':
-fdlog_files_flush2.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x2e5): undefined reference to `fdlog_open'
-/usr/bin/ld: fdlog_files_flush2.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x375): undefined reference to `fdlog_files_flush'
-clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

@@ -1,4 +1,0 @@
-/usr/bin/ld: /tmp/chunkqueue_set_tempdirs_default1-daf65c.o: in function `LLVMFuzzerTestOneInput':
-chunkqueue_set_tempdirs_default1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1f5): undefined reference to `array_init'
-/usr/bin/ld: chunkqueue_set_tempdirs_default1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x267): undefined reference to `chunkqueue_set_tempdirs_default'
-clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

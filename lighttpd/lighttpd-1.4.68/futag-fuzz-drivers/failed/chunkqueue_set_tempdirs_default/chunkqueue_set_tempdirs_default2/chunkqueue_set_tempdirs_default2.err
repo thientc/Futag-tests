@@ -1,4 +1,0 @@
-/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/chunkqueue_set_tempdirs_default/chunkqueue_set_tempdirs_default2/chunkqueue_set_tempdirs_default2.c:30:37: error: use of undeclared identifier 's__tempdirs'
-    chunkqueue_set_tempdirs_default(s__tempdirs ,b_upload_temp_file_size );
-                                    ^
-1 error generated.

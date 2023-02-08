@@ -1,3 +1,0 @@
-/usr/bin/ld: /tmp/fdlog_pipes_restart1-7421fe.o: in function `LLVMFuzzerTestOneInput':
-fdlog_pipes_restart1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1cd): undefined reference to `fdlog_pipes_restart'
-clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

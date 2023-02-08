@@ -1,3 +1,0 @@
-/usr/bin/ld: /tmp/li_utostrn1-988430.o: in function `LLVMFuzzerTestOneInput':
-li_utostrn1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x36a): undefined reference to `li_utostrn'
-clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

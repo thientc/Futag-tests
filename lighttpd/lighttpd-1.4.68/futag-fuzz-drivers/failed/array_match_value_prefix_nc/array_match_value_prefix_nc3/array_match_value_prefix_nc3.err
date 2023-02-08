@@ -1,8 +1,0 @@
-/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/array_match_value_prefix_nc/array_match_value_prefix_nc3/array_match_value_prefix_nc3.c:22:39: error: use of undeclared identifier 's__b'; did you mean 's__a'?
-    array_match_value_prefix_nc(s__a ,s__b );
-                                      ^~~~
-                                      s__a
-/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/array_match_value_prefix_nc/array_match_value_prefix_nc3/array_match_value_prefix_nc3.c:19:13: note: 's__a' declared here
-    array * s__a = array_init(b_1_n);
-            ^
-1 error generated.

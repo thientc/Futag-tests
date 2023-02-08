@@ -1,4 +1,0 @@
-/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/buffer_eq_slen/buffer_eq_slen3/buffer_eq_slen3.c:30:20: error: use of undeclared identifier 's__b'
-    buffer_eq_slen(s__b ,str_s ,sz__slen );
-                   ^
-1 error generated.

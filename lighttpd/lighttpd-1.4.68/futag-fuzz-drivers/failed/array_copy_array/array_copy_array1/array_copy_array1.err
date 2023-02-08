@@ -1,5 +1,0 @@
-/usr/bin/ld: /tmp/array_copy_array1-1b76bd.o: in function `LLVMFuzzerTestOneInput':
-array_copy_array1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1eb): undefined reference to `array_init'
-/usr/bin/ld: array_copy_array1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x268): undefined reference to `array_init'
-/usr/bin/ld: array_copy_array1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x282): undefined reference to `array_copy_array'
-clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

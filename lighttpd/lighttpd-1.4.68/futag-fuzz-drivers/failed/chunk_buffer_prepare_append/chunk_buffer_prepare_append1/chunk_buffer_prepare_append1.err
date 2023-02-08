@@ -1,4 +1,0 @@
-/usr/bin/ld: /tmp/chunk_buffer_prepare_append1-00efb2.o: in function `LLVMFuzzerTestOneInput':
-chunk_buffer_prepare_append1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x16a): undefined reference to `chunk_buffer_acquire'
-/usr/bin/ld: chunk_buffer_prepare_append1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1dc): undefined reference to `chunk_buffer_prepare_append'
-clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

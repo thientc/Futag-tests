@@ -1,3 +1,0 @@
-/usr/bin/ld: /tmp/fdlog_pipe_serrh1-f02484.o: in function `LLVMFuzzerTestOneInput':
-fdlog_pipe_serrh1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1e5): undefined reference to `fdlog_pipe_serrh'
-clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

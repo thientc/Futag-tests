@@ -1,4 +1,0 @@
-/usr/bin/ld: /tmp/fdlog_closeall1-761ed0.o: in function `LLVMFuzzerTestOneInput':
-fdlog_closeall1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x38c): undefined reference to `fdlog_init'
-/usr/bin/ld: fdlog_closeall1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x39f): undefined reference to `fdlog_closeall'
-clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

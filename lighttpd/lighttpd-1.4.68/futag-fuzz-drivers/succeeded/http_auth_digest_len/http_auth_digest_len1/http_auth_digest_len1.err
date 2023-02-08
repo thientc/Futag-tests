@@ -1,4 +1,0 @@
-/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/http_auth_digest_len/http_auth_digest_len1/http_auth_digest_len1.c:20:5: warning: ignoring return value of function declared with const attribute [-Wunused-value]
-    http_auth_digest_len(b_algo );
-    ^~~~~~~~~~~~~~~~~~~~ ~~~~~~
-1 warning generated.

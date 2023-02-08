@@ -1,4 +1,0 @@
-/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/buffer_append_str3/buffer_append_str33/buffer_append_str33.c:59:24: error: use of undeclared identifier 's__b'
-    buffer_append_str3(s__b ,str_s1 ,sz__len1 ,str_s2 ,sz__len2 ,str_s3 ,sz__len3 );
-                       ^
-1 error generated.

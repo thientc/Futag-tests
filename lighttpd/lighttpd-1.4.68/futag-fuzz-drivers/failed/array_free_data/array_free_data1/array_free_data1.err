@@ -1,4 +1,0 @@
-/usr/bin/ld: /tmp/array_free_data1-cdc838.o: in function `LLVMFuzzerTestOneInput':
-array_free_data1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1d9): undefined reference to `array_init'
-/usr/bin/ld: array_free_data1.c:(.text.LLVMFuzzerTestOneInput[LLVMFuzzerTestOneInput]+0x1ec): undefined reference to `array_free_data'
-clang-14: error: linker command failed with exit code 1 (use -v to see invocation)

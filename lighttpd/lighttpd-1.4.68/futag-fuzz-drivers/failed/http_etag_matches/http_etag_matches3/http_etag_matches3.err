@@ -1,4 +1,0 @@
-/home/futag/Futag-tests/lighttpd/lighttpd-1.4.68/.futag-fuzz-drivers/http_etag_matches/http_etag_matches3/http_etag_matches3.c:32:23: error: use of undeclared identifier 's__etag'
-    http_etag_matches(s__etag ,str_s ,sz__weak_ok );
-                      ^
-1 error generated.
