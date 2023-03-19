@@ -3,28 +3,26 @@
 
 from futag.preprocessor import *
 from futag.generator import * 
-from futag.sysmsg import * 
 from futag.fuzzer import * 
 
-# FUTAG_PATH = "/home/futag/Futag/product-tests/futag-llvm"
 FUTAG_PATH = "/home/futag/Futag/futag-llvm"
-lib_path = "json-c-json-c-0.16-20220414"
-build_test = Builder(
+library_root = "json-c-json-c-0.16-20220414"
+consumer_root = "libstorj-1.0.3"
+build_test = ConsumerBuilder(
    FUTAG_PATH, 
-   lib_path,
+   library_root,
+   consumer_root,
    clean=True,
    processes=16,
 )
 build_test.auto_build()
 build_test.analyze()
 
-# generator = Generator(
-#     FUTAG_PATH, 
-#     lib_path, 
-# )
-
-# generator.gen_targets()
-# generator.compile_targets(
-#     # coverage=True,
-#     keep_failed=True,
-# )
+generator = ContextGenerator(
+    FUTAG_PATH, 
+    library_root, 
+)
+generator.gen_context()
+generator.compile_targets(
+    keep_failed=True,
+)

@@ -9,4 +9,7 @@ if [ ! -f json-c-0.16-20220414.tar.gz ]; then
 fi
 tar xf json-c-0.16-20220414.tar.gz
 
+rm -rf libstorj-1.0.3
+tar xf _libstorj.tar.gz
+
 echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."

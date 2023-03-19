@@ -18,7 +18,7 @@ WORKDIR /home/futag/Futag-tests
 RUN ./get-Futag.sh
 
 USER root
-RUN pip install futag-llvm/python-package/futag-1.3.1.tar.gz
+RUN pip install futag-llvm/python-package/futag-2.0.0.tar.gz
 
 USER futag 
 WORKDIR /home/futag/Futag-tests/curl

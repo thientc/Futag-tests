@@ -19,12 +19,12 @@ build_test = Builder(
 build_test.auto_build()
 build_test.analyze()
 
-generator = Generator(
-    FUTAG_PATH, 
-    lib_path,
-    build_path=lib_path,
-)
-generator.gen_targets()
-generator.compile_targets(4)
+# generator = Generator(
+#     FUTAG_PATH, 
+#     lib_path,
+#     build_path=lib_path,
+# )
+# generator.gen_targets()
+# generator.compile_targets(4)
 
 print("-- [Futag]: fuzz-drivers are saved in FreeImage/futag-fuzz-targets!")
