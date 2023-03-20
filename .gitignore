@@ -6,7 +6,12 @@ libFuzzer/*
 
 json-c/json-c-0.16-20220414.tar.gz
 json-c/json-c-json-c-0.16-20220414*
-json-c/json-c
+json-c/*.c
+json-c/*.log
+json-c/oom*
+json-c/leak*
+json-c/libstorj-*
+json-c/consummers/libstorj-*
 
 libpq-standalone/libpq-standalone-REL*
 libpq-standalone/libpq-standalone.poc
@@ -27,8 +32,7 @@ nDPI/4.4.tar.gz
 pugixml/pugixml*
 pugixml/pugixml-1.12.tar.gz
 
-curl/curl-7.85.0
-curl/curl-7.85.0.tar.gz
+curl/curl-7.85.0*
 
 php/php7
 php/php-src-php-7.4.30
