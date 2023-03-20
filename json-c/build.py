@@ -18,13 +18,13 @@ build_test = Builder(
 build_test.auto_build()
 build_test.analyze()
 
-# generator = Generator(
-#     FUTAG_PATH, 
-#     lib_path, 
-# )
+generator = Generator(
+    FUTAG_PATH, 
+    lib_path, 
+)
 
-# generator.gen_targets()
-# generator.compile_targets(
-#     # coverage=True,
-#     keep_failed=True,
-# )
+generator.gen_targets()
+generator.compile_targets(
+    # coverage=True,
+    keep_failed=True,
+)
