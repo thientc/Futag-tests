@@ -3,34 +3,36 @@
 
 from futag.preprocessor import *
 from futag.generator import * 
+from futag.sysmsg import * 
 from futag.fuzzer import * 
-import os
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
 
-os.chdir("openssl-1.1.1s")
-lib_path="."
+FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+lib_path = "json-c-json-c-0.16-20220414"
 build_test = Builder(
-     FUTAG_PATH,
-     lib_path,
-     clean=False,
-     build_path=lib_path,
-     processes=16
- )
+   FUTAG_PATH, 
+   lib_path,
+   clean=True,
+   processes=16,
+)
 build_test.auto_build()
 build_test.analyze()
 
 generator = Generator(
-    FUTAG_PATH,
+    FUTAG_PATH, 
     lib_path,
-    build_path=lib_path,
+    target_type=LIBFUZZER
 )
+
 generator.gen_targets()
-generator.compile_targets(workers=16, keep_failed=True)
+generator.compile_targets(
+    coverage=True,
+    keep_failed=True,
+)
+
 fuzzer = Fuzzer(
     FUTAG_PATH,
-    "json-c/futag-fuzz-drivers",
+    "/home/futag/Futag-tests/json-c/json-c-json-c-0.16-20220414/futag-fuzz-drivers",
     debug=True,
-    totaltime=30,
-    fork=4,
-    svres=True
+    totaltime= 2,
 )
+fuzzer.fuzz()

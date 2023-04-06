@@ -20,7 +20,7 @@ generator = Generator(
     FUTAG_PATH,
     lib_path,
 )
-generator.gen_targets(anonymous=True)
+generator.gen_targets(anonymous=False)
 generator.compile_targets(keep_failed=True)
 
 print("-- [Futag]: fuzz-drivers are saved in pugixml/futag-fuzz-targets!")

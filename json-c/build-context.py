@@ -5,7 +5,7 @@ from futag.preprocessor import *
 from futag.generator import * 
 from futag.fuzzer import * 
 
-FUTAG_PATH = "/home/futag/Futag/futag-llvm"
+FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
 library_root = "json-c-json-c-0.16-20220414"
 consumer_root = "libstorj-1.0.3"
 build_test = ConsumerBuilder(
