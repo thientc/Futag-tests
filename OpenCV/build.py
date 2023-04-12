@@ -21,4 +21,4 @@ generator = Generator(
 generator.gen_targets()
 generator.compile_targets(4)
 
-print("-- [Futag]: fuzz-drivers are saved in opencv-4.6.0/futag-fuzz-targets!")
+print("-- [Futag]: fuzz-drivers are saved in opencv-4.6.0/futag-fuzz-drivers!")

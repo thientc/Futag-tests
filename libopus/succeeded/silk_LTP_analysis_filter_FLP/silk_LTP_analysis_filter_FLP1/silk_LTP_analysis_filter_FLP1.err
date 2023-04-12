@@ -1,0 +1,44 @@
+In file included from /home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_LTP_analysis_filter_FLP/silk_LTP_analysis_filter_FLP1/silk_LTP_analysis_filter_FLP1.c:12:
+/home/futag/Futag-tests/libopus/opus-1.3.1/celt/mathops.h:41:9: warning: 'PI' macro redefined [-Wmacro-redefined]
+#define PI 3.141592653f
+        ^
+/home/futag/Futag-tests/libopus/opus-1.3.1/silk/float/SigProc_FLP.h:143:9: note: previous definition is here
+#define PI              (3.1415926536f)
+        ^
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_LTP_analysis_filter_FLP/silk_LTP_analysis_filter_FLP1/silk_LTP_analysis_filter_FLP1.c:52:12: warning: passing 'const float *' to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    memcpy(a_B, futag_pos, 20 * sizeof(float));
+           ^~~
+/usr/include/string.h:43:39: note: passing argument to parameter '__dest' here
+extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+                                      ^
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_LTP_analysis_filter_FLP/silk_LTP_analysis_filter_FLP1/silk_LTP_analysis_filter_FLP1.c:57:12: warning: passing 'const int *' to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    memcpy(a_pitchL, futag_pos, 4 * sizeof(int));
+           ^~~~~~~~
+/usr/include/string.h:43:39: note: passing argument to parameter '__dest' here
+extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+                                      ^
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_LTP_analysis_filter_FLP/silk_LTP_analysis_filter_FLP1/silk_LTP_analysis_filter_FLP1.c:62:12: warning: passing 'const float *' to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    memcpy(a_invGains, futag_pos, 4 * sizeof(float));
+           ^~~~~~~~~~
+/usr/include/string.h:43:39: note: passing argument to parameter '__dest' here
+extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+                                      ^
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_LTP_analysis_filter_FLP/silk_LTP_analysis_filter_FLP1/silk_LTP_analysis_filter_FLP1.c:90:15: warning: passing 'const float *' to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        free( a_B);
+              ^~~
+/usr/include/stdlib.h:555:25: note: passing argument to parameter '__ptr' here
+extern void free (void *__ptr) __THROW;
+                        ^
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_LTP_analysis_filter_FLP/silk_LTP_analysis_filter_FLP1/silk_LTP_analysis_filter_FLP1.c:94:15: warning: passing 'const int *' to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        free( a_pitchL);
+              ^~~~~~~~
+/usr/include/stdlib.h:555:25: note: passing argument to parameter '__ptr' here
+extern void free (void *__ptr) __THROW;
+                        ^
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_LTP_analysis_filter_FLP/silk_LTP_analysis_filter_FLP1/silk_LTP_analysis_filter_FLP1.c:98:15: warning: passing 'const float *' to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        free( a_invGains);
+              ^~~~~~~~~~
+/usr/include/stdlib.h:555:25: note: passing argument to parameter '__ptr' here
+extern void free (void *__ptr) __THROW;
+                        ^
+7 warnings generated.

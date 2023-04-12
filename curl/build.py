@@ -5,8 +5,7 @@ from futag.preprocessor import *
 from futag.generator import * 
 from futag.sysmsg import * 
 
-# FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
-FUTAG_PATH = "/home/futag/Futag/futag-llvm"
+FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
 
 lib_path = "curl-7.85.0"
 lib_test = Builder(
@@ -19,14 +18,14 @@ lib_test = Builder(
 lib_test.auto_build()
 lib_test.analyze()
 
-# lib_test = Generator(
-#     FUTAG_PATH,
-#     lib_path,
-# )
-# lib_test.gen_targets()
-# lib_test.compile_targets(16, keep_failed=True, 
-#     extra_include="-DHAVE_CONFIG_H",
-#     extra_dynamiclink="-lgsasl -lpsl -lldap -lbrotlidec -lz -lidn2 -llber"
-# )
+lib_test = Generator(
+    FUTAG_PATH,
+    lib_path,
+)
+lib_test.gen_targets()
+lib_test.compile_targets(16, keep_failed=True, 
+    extra_include="-DHAVE_CONFIG_H",
+    extra_dynamiclink="-lgsasl -lpsl -lldap -lbrotlidec -lz -lidn2 -llber"
+)
 
-# print("-- [Futag]: fuzz-drivers are saved in curl/futag-fuzz-targets!")
+print("-- [Futag]: fuzz-drivers are saved in curl/futag-fuzz-drivers!")

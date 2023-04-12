@@ -24,4 +24,4 @@ lib_test.gen_targets()
 lib_test.compile_targets(16, keep_failed=True, 
 )
 
-# print("-- [Futag]: fuzz-drivers are saved in curl/futag-fuzz-targets!")
+# print("-- [Futag]: fuzz-drivers are saved in curl/futag-fuzz-drivers!")

@@ -23,4 +23,4 @@ test_build.auto_build()
 # generator.gen_targets(anonymous=True)
 # generator.compile_targets(keep_failed=True)
 
-print("-- [Futag]: fuzz-drivers are saved in pugixml/futag-fuzz-targets!")
+print("-- [Futag]: fuzz-drivers are saved in pugixml/futag-fuzz-drivers!")

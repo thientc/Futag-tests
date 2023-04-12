@@ -29,4 +29,4 @@ generator = Generator(
 generator.gen_targets()
 generator.compile_targets()
 
-print("-- [Futag]: fuzz-drivers are saved in nDPI/futag-fuzz-targets!")
+print("-- [Futag]: fuzz-drivers are saved in nDPI/futag-fuzz-drivers!")

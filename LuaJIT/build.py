@@ -29,4 +29,4 @@ generator = Generator(
 generator.gen_targets()
 generator.compile_targets(4)
 
-# print("-- [Futag]: fuzz-drivers are saved in LuaJIT/futag-fuzz-targets!")
+# print("-- [Futag]: fuzz-drivers are saved in LuaJIT/futag-fuzz-drivers!")

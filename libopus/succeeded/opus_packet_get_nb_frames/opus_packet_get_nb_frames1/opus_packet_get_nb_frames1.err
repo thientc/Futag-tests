@@ -1,0 +1,4 @@
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/opus_packet_get_nb_frames/opus_packet_get_nb_frames1/opus_packet_get_nb_frames1.c:46:5: warning: ignoring return value of function declared with 'warn_unused_result' attribute [-Wunused-result]
+    opus_packet_get_nb_frames(str_packet ,b_len );
+    ^~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~
+1 warning generated.

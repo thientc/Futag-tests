@@ -1,0 +1,4 @@
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_VQ_WMat_EC_sse4_1/silk_VQ_WMat_EC_sse4_11/silk_VQ_WMat_EC_sse4_11.c:131:5: warning: implicit declaration of function 'silk_VQ_WMat_EC_sse4_1' is invalid in C99 [-Wimplicit-function-declaration]
+    silk_VQ_WMat_EC_sse4_1(p_b__ind ,p_b__rate_dist_Q14 ,p_b__gain_Q7 ,p_q_b__in_Q14 ,p_q_b__W_Q18 ,p_q_b__cb_Q7 ,str_cb_gain_Q7 ,str_cl_Q5 ,sz__mu_Q9 ,q_b__max_gain_Q7 ,b_L );
+    ^
+1 warning generated.

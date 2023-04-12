@@ -1,0 +1,4 @@
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/opus_encoder_create/opus_encoder_create1/opus_encoder_create1.c:59:5: warning: ignoring return value of function declared with 'warn_unused_result' attribute [-Wunused-result]
+    opus_encoder_create(b_Fs ,b_channels ,b_application ,p_b__error );
+    ^~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.

@@ -1,0 +1,25 @@
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_quant_LTP_gains/silk_quant_LTP_gains1/silk_quant_LTP_gains1.c:64:12: warning: passing 'const opus_int32 *' (aka 'const int *') to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    memcpy(a_XX_Q17, futag_pos, 100 * sizeof(int));
+           ^~~~~~~~
+/usr/include/string.h:43:39: note: passing argument to parameter '__dest' here
+extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+                                      ^
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_quant_LTP_gains/silk_quant_LTP_gains1/silk_quant_LTP_gains1.c:69:12: warning: passing 'const opus_int32 *' (aka 'const int *') to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    memcpy(a_xX_Q17, futag_pos, 20 * sizeof(int));
+           ^~~~~~~~
+/usr/include/string.h:43:39: note: passing argument to parameter '__dest' here
+extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+                                      ^
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_quant_LTP_gains/silk_quant_LTP_gains1/silk_quant_LTP_gains1.c:103:15: warning: passing 'const opus_int32 *' (aka 'const int *') to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        free( a_XX_Q17);
+              ^~~~~~~~
+/usr/include/stdlib.h:555:25: note: passing argument to parameter '__ptr' here
+extern void free (void *__ptr) __THROW;
+                        ^
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_quant_LTP_gains/silk_quant_LTP_gains1/silk_quant_LTP_gains1.c:107:15: warning: passing 'const opus_int32 *' (aka 'const int *') to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        free( a_xX_Q17);
+              ^~~~~~~~
+/usr/include/stdlib.h:555:25: note: passing argument to parameter '__ptr' here
+extern void free (void *__ptr) __THROW;
+                        ^
+4 warnings generated.

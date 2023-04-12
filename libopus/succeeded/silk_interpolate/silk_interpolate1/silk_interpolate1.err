@@ -1,0 +1,25 @@
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_interpolate/silk_interpolate1/silk_interpolate1.c:37:12: warning: passing 'const opus_int16 *' (aka 'const short *') to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    memcpy(a_x0, futag_pos, 16 * sizeof(short));
+           ^~~~
+/usr/include/string.h:43:39: note: passing argument to parameter '__dest' here
+extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+                                      ^
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_interpolate/silk_interpolate1/silk_interpolate1.c:42:12: warning: passing 'const opus_int16 *' (aka 'const short *') to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    memcpy(a_x1, futag_pos, 16 * sizeof(short));
+           ^~~~
+/usr/include/string.h:43:39: note: passing argument to parameter '__dest' here
+extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+                                      ^
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_interpolate/silk_interpolate1/silk_interpolate1.c:67:15: warning: passing 'const opus_int16 *' (aka 'const short *') to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        free( a_x0);
+              ^~~~
+/usr/include/stdlib.h:555:25: note: passing argument to parameter '__ptr' here
+extern void free (void *__ptr) __THROW;
+                        ^
+/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-fuzz-drivers/silk_interpolate/silk_interpolate1/silk_interpolate1.c:71:15: warning: passing 'const opus_int16 *' (aka 'const short *') to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        free( a_x1);
+              ^~~~
+/usr/include/stdlib.h:555:25: note: passing argument to parameter '__ptr' here
+extern void free (void *__ptr) __THROW;
+                        ^
+4 warnings generated.

@@ -22,4 +22,4 @@ generator = Generator(
 generator.gen_targets()
 generator.compile_targets(8)
 
-print("-- [Futag]: fuzz-drivers are saved in tinyxml2/futag-fuzz-targets!")
+print("-- [Futag]: fuzz-drivers are saved in tinyxml2/futag-fuzz-drivers!")
