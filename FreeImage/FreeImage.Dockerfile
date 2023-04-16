@@ -8,8 +8,8 @@ LABEL maintainer="thientcgithub@gmail.com"
 LABEL description="This is custom Docker Image based on Ubuntu 20.04 for testing Futag."
 
 RUN apt update --fix-missing
-RUN apt install -y gcc g++ software-properties-common apt-utils libncurses5 make gdb openssh-client git wget xz-utils python3 python3-pip python-is-python3   unzip
-
+RUN apt install -y gcc g++ software-properties-common apt-utils libncurses5 libtinfo-dev make gdb openssh-client git wget xz-utils python3 python3-pip unzip
+RUN apt install -y libtinfo5
 RUN useradd -ms /bin/bash futag
 
 USER futag
@@ -19,9 +19,9 @@ WORKDIR /home/futag/Futag-tests
 RUN ./get-Futag.sh
 
 USER root
-RUN pip3 install futag-llvm/python-package/futag-2.0.1.tar.gz
+RUN pip3 install futag-llvm/python-package/futag-2.0.2.tar.gz
 
-USER futag 
+#USER futag 
 WORKDIR /home/futag/Futag-tests/FreeImage
 RUN ./prepare.sh
 RUN python3 build.py

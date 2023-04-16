@@ -15,17 +15,17 @@ fi
 tar xf json-c-0.16-20220414.tar.gz
 
 echo "-- [Futag]: Getting Futag 1.3.1:"
-if [ ! -f futag-llvm.2.0.1.tar.xz ]; then
-    wget https://github.com/ispras/Futag/releases/download/2.0.1/futag-llvm.2.0.1.tar.xz
+if [ ! -f futag-llvm.2.0.2.tar.xz ]; then
+    wget https://github.com/ispras/Futag/releases/download/2.0.1/futag-llvm.2.0.2.tar.xz
 fi
 if [ ! -d futag-llvm ]; then
     rm -rf futag-llvm
 fi
 echo "-- [Futag]: Extracting Futag 1.3.1 ... "
-tar xf futag-llvm.2.0.1.tar.xz
+tar xf futag-llvm.2.0.2.tar.xz
 
-echo "-- [Futag]: Установите Питон-пакет futag.2.0.1.tar.gz:"
-echo "$ pip install futag-llvm/python-package/futag-2.0.1.tar.gz"
+echo "-- [Futag]: Установите Питон-пакет futag.2.0.2.tar.gz:"
+echo "$ pip install futag-llvm/python-package/futag-2.0.2.tar.gz"
 echo ""
 
 echo "-- [Futag]: Примеры использования:"

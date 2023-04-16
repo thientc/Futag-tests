@@ -6,14 +6,14 @@ from futag.generator import *
 
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
 lib_path = "libvpx-1.13.0"
-# test_build = Builder(
-#     FUTAG_PATH,
-#     lib_path,
-#     clean=False,
-#     processes=16
-# )
-# # test_build.auto_build()
-# test_build.analyze()
+test_build = Builder(
+    FUTAG_PATH,
+    lib_path,
+    clean=True,
+    processes=16
+)
+test_build.auto_build()
+test_build.analyze()
 
 generator = Generator(
     FUTAG_PATH,
