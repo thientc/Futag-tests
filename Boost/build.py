@@ -6,7 +6,7 @@ from futag.preprocessor import *
 from futag.generator import * 
 from futag.sysmsg import * 
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "boost_1_80_0"
 build_test = Builder(
    FUTAG_PATH, 

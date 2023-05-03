@@ -4,7 +4,7 @@
 from futag.preprocessor import *
 from futag.generator import * 
 import time 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "pugixml-1.12"
 
 with open("result.ini", "a") as f :

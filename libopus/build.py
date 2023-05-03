@@ -6,7 +6,7 @@ from futag.generator import *
 import pathlib
 
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "opus-1.3.1"
 # # os.chdir("libmpeg2-0.5.1")
 # test_build = Builder(

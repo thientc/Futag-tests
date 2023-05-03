@@ -2,10 +2,8 @@
 # This file is distributed under the GPL v3 license (https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 from futag.preprocessor import *
-from futag.generator import * 
-from futag.fuzzer import * 
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 library_root = "json-c-json-c-0.16-20220414"
 consumer_root = "libstorj-1.0.3"
 build_test = ConsumerBuilder(
@@ -17,6 +15,11 @@ build_test = ConsumerBuilder(
 )
 build_test.auto_build()
 build_test.analyze()
+
+
+
+from futag.generator import * 
+from futag.fuzzer import * 
 
 generator = ContextGenerator(
     FUTAG_PATH, 

@@ -10,7 +10,7 @@ from futag.preprocessor import *
 from futag.generator import * 
 from futag.sysmsg import * 
 os.chdir("nDPI")
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "."
 test_build = Builder(
     FUTAG_PATH,  

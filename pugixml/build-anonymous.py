@@ -4,7 +4,7 @@
 from futag.preprocessor import *
 from futag.generator import * 
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "pugixml-1.12"
 
 test_build = Builder(

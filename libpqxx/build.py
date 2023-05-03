@@ -5,7 +5,7 @@ from futag.preprocessor import *
 from futag.generator import * 
 from futag.fuzzer import * 
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "libpqxx-7.7.4"
 test_build = Builder(
     FUTAG_PATH, 

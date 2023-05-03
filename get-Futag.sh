@@ -20,4 +20,6 @@ if [ ! -f futag-llvm.2.0.3.tar.xz ]; then
 fi
 echo "-- [Futag]: Extracting..."
 tar xf futag-llvm.2.0.3.tar.xz
-echo "-- [Futag]: Futag package is extracted to futag-llvm folder!"
+mkdir ../Futag
+mv futag-llvm ../Futag/
+echo "-- [Futag]: Futag package is extracted to .../Futag/futag-llvm folder!"

@@ -6,7 +6,7 @@ from futag.generator import *
 from futag.fuzzer import * 
 import time 
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 
 lib_path = "libpq-standalone-REL_15_1"
 with open("result.ini", "a") as f :

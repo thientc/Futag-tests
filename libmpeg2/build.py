@@ -4,7 +4,7 @@
 from futag.preprocessor import *
 from futag.generator import * 
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "mpeg2dec-0.4.1"
 # os.chdir("libmpeg2-0.5.1")
 test_build = Builder(

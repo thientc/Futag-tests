@@ -5,7 +5,7 @@ from futag.preprocessor import *
 from futag.generator import * 
 from futag.fuzzer import * 
 import os
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 
 os.chdir("openssl-1.1.1s")
 lib_path="."

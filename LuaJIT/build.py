@@ -8,7 +8,7 @@ from futag.generator import *
 from futag.sysmsg import *
 
 os.chdir("LuaJIT")
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "."
 
 build_test = Builder(

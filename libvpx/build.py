@@ -4,7 +4,7 @@
 from futag.preprocessor import *
 from futag.generator import * 
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "libvpx-1.13.0"
 test_build = Builder(
     FUTAG_PATH,

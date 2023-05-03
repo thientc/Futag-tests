@@ -5,7 +5,7 @@ from futag.preprocessor import *
 from futag.generator import * 
 from futag.fuzzer import * 
 import os
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 
 lib_path="libgit2-1.5.0"
 build_test = Builder(

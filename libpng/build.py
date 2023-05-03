@@ -6,7 +6,7 @@ from futag.generator import *
 from futag.sysmsg import * 
 import time 
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "libpng-1.6.35"
 
 with open("result.ini", "a") as f :

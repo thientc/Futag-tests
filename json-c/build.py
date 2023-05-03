@@ -8,7 +8,7 @@ from futag.fuzzer import *
 import time 
 start = time.time()
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "json-c-json-c-0.16-20220414"
 
 with open("result.ini", "a") as f :

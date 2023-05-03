@@ -5,7 +5,7 @@ from futag.preprocessor import *
 from futag.generator import * 
 from futag.sysmsg import * 
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "lighttpd-1.4.68"
 lib_test = Builder(
     FUTAG_PATH,
