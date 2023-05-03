@@ -3,24 +3,43 @@
 
 from futag.preprocessor import *
 from futag.generator import * 
-
+import time 
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
 lib_path = "pugixml-1.12"
 
-test_build = Builder(
-    FUTAG_PATH,
-    lib_path,
-    clean=True,
-    processes=16
-)
-test_build.auto_build()
-test_build.analyze()
+with open("result.ini", "a") as f :
+    start = time.time()
+    test_build = Builder(
+        FUTAG_PATH,
+        lib_path,
+        clean=True,
+        processes=16
+    )
+    test_build.auto_build()
+    test_build.analyze()
+    end = time.time()
+    f.write("- Analyzing time: ")
+    f.write(str(end - start))
+    f.write("\n")
 
-generator = Generator(
-    FUTAG_PATH,
-    lib_path,
-)
-generator.gen_targets(anonymous=False)
-generator.compile_targets(keep_failed=True)
+with open("result.ini", "a") as f :
+    start = time.time()
+    generator = Generator(
+        FUTAG_PATH,
+        lib_path,
+    )
+    generator.gen_targets(anonymous=False)
+    
+    end = time.time()
+    f.write("- Generation time: ")
+    f.write(str(end - start))
+    f.write("\n")
+
+    start = time.time()
+    generator.compile_targets(keep_failed=True)
+    end = time.time()
+    f.write("- Compile time: ")
+    f.write(str(end - start))
+    f.write("\n")
 
 print("-- [Futag]: fuzz-drivers are saved in pugixml/futag-fuzz-drivers!")

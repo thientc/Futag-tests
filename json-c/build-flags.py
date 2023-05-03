@@ -33,6 +33,7 @@ fuzzer = Fuzzer(
     FUTAG_PATH,
     "/home/futag/Futag-tests/json-c/json-c-json-c-0.16-20220414/futag-fuzz-drivers",
     debug=True,
+    svres=True,
     totaltime= 2,
 )
 fuzzer.fuzz()

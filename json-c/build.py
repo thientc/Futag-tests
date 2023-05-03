@@ -5,25 +5,42 @@ from futag.preprocessor import *
 from futag.generator import * 
 from futag.sysmsg import * 
 from futag.fuzzer import * 
+import time 
+start = time.time()
 
 FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm/"
 lib_path = "json-c-json-c-0.16-20220414"
-build_test = Builder(
-   FUTAG_PATH, 
-   lib_path,
-   clean=True,
-   processes=16,
-)
-build_test.auto_build()
-build_test.analyze()
 
-generator = Generator(
+with open("result.ini", "a") as f :
+    start = time.time()
+    build_test = Builder(
     FUTAG_PATH, 
-    lib_path, 
-)
+    lib_path,
+    clean=True,
+    processes=16,
+    )
+    build_test.auto_build()
+    build_test.analyze()
+    end = time.time()
+    f.write("- Analyzing time: ")
+    f.write(str(end - start))
 
-generator.gen_targets()
-generator.compile_targets(
-    # coverage=True,
-    keep_failed=True,
-)
+with open("result.ini", "a") as f :
+    start = time.time()
+    generator = Generator(
+        FUTAG_PATH, 
+        lib_path, 
+    )
+    generator.gen_targets()
+    end = time.time()
+    f.write("- Generation time: ")
+    f.write(str(end - start))
+    start = time.time()
+    generator.compile_targets(
+        # coverage=True,
+        keep_failed=True,
+    )
+    end = time.time()
+    f.write("- Compile time: ")
+    f.write(str(end - start))
+    f.write("\n")
