@@ -14,7 +14,8 @@ with open("result.ini", "a") as f :
     lib_test = Builder(
         FUTAG_PATH,
         lib_path,
-        clean=True, 
+        clean=True,
+        intercept=True,
         processes=16,
         build_ex_params="--without-ssl" 
     )
@@ -23,21 +24,24 @@ with open("result.ini", "a") as f :
     end = time.time()
     f.write("- Analyzing time: ")
     f.write(str(end - start))
+    f.write("\n")
 
 with open("result.ini", "a") as f :
     start = time.time()
     lib_test = Generator(
         FUTAG_PATH,
         lib_path,
+
     )
     lib_test.gen_targets()
     end = time.time()
     f.write("- Generation time: ")
     f.write(str(end - start))
-    
+    f.write("\n")
+
     start = time.time()
     lib_test.compile_targets(16, keep_failed=True, 
-        extra_include="-DHAVE_CONFIG_H",
+        extra_params="-DHAVE_CONFIG_H",
         extra_dynamiclink="-lgsasl -lpsl -lldap -lbrotlidec -lz -lidn2 -llber"
     )
     end = time.time()

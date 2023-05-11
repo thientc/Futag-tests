@@ -3,44 +3,44 @@
 
 from futag.preprocessor import *
 from futag.generator import * 
-from futag.fuzzer import * 
-import os
 import time 
-
 FUTAG_PATH = "/home/futag/Futag/futag-llvm"
+lib_path = "Python-3.10.11"
 
-os.chdir("openssl-1.1.1s")
-lib_path="."
 with open("result.ini", "a") as f :
     start = time.time()
-    build_test = Builder(
+    test_build = Builder(
         FUTAG_PATH,
         lib_path,
-        clean=False,
-        build_path=lib_path,
+        clean=True,
+        intercept=False,
         processes=16
     )
-    build_test.auto_build()
-    build_test.analyze()
+    test_build.auto_build()
+    test_build.analyze()
     end = time.time()
     f.write("- Analyzing time: ")
     f.write(str(end - start))
     f.write("\n")
 
+with open("result.ini", "a") as f :
     start = time.time()
     generator = Generator(
         FUTAG_PATH,
         lib_path,
-        build_path=lib_path,
     )
-    generator.gen_targets()
+    generator.gen_targets(anonymous=False)
+    
     end = time.time()
     f.write("- Generation time: ")
     f.write(str(end - start))
     f.write("\n")
+
     start = time.time()
-    generator.compile_targets(workers=16, keep_failed=True)
+    generator.compile_targets(keep_failed=True)
     end = time.time()
     f.write("- Compile time: ")
     f.write(str(end - start))
     f.write("\n")
+
+print("-- [Futag]: fuzz-drivers are saved in pugixml/futag-fuzz-drivers!")

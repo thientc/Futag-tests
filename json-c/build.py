@@ -15,15 +15,16 @@ with open("result.ini", "a") as f :
     start = time.time()
     build_test = Builder(
     FUTAG_PATH, 
-    lib_path,
-    clean=True,
-    processes=16,
+        lib_path,
+        clean=True,
+        processes=16,
     )
     build_test.auto_build()
     build_test.analyze()
     end = time.time()
     f.write("- Analyzing time: ")
     f.write(str(end - start))
+    f.write("\n")
 
 with open("result.ini", "a") as f :
     start = time.time()
@@ -31,11 +32,12 @@ with open("result.ini", "a") as f :
         FUTAG_PATH, 
         lib_path, 
     )
-    generator.gen_targets()
+    generator.gen_targets(max_wrappers=1000)
     end = time.time()
     f.write("- Generation time: ")
     f.write(str(end - start))
     start = time.time()
+    f.write("\n")
     generator.compile_targets(
         # coverage=True,
         keep_failed=True,

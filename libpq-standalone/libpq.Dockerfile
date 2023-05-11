@@ -11,16 +11,15 @@ RUN apt update --fix-missing
 RUN apt install -y apt-utils libncurses5 gcc gcc-multilib binutils binutils-gold binutils-dev g++ make gdb openssh-client git wget xz-utils python3 python3-pip python-is-python3  nano cmake libtool
 RUN useradd -ms /bin/bash futag
 
-USER futag
+USER root
+
 WORKDIR /home/futag/
 RUN git clone https://github.com/thientc/Futag-tests.git
 WORKDIR /home/futag/Futag-tests
 RUN ./get-Futag.sh
 
-USER root
-RUN pip install futag-llvm/python-package/futag-2.0.3.tar.gz
+RUN pip install /home/futag/Futag/futag-llvm/python-package/futag-2.0.3.tar.gz
 
-USER futag 
 WORKDIR /home/futag/Futag-tests/libpq-standalone
 RUN ./prepare.sh
 RUN python3 build.py

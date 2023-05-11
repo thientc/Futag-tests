@@ -21,6 +21,7 @@ with open("result.ini", "a") as f :
     end = time.time()
     f.write("- Analyzing time: ")
     f.write(str(end - start))
+    f.write("\n")
 
 with open("result.ini", "a") as f :
     start = time.time()
@@ -30,6 +31,8 @@ with open("result.ini", "a") as f :
     generator.gen_targets()
     end = time.time()
     f.write("- Generation time: ")
+    f.write(str(end - start))
+    f.write("\n")
     
     start = time.time()
     generator.compile_targets(16, keep_failed=True, extra_dynamiclink=" -lm -lz -lm ")
