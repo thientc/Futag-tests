@@ -25,7 +25,7 @@ echo "-- [Futag]: Extracting Futag 1.3.1 ... "
 tar xf futag-llvm.2.0.3.tar.xz
 
 echo "-- [Futag]: Установите Питон-пакет futag.2.0.3.tar.gz:"
-echo "$ pip install futag-llvm/python-package/futag-2.0.3.tar.gz"
+echo "$ pip install /home/futag/Futag-tests/futag-llvm/python-package/futag-2.0.3.tar.gz"
 echo ""
 
 echo "-- [Futag]: Примеры использования:"
