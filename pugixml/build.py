@@ -4,23 +4,23 @@
 from futag.preprocessor import *
 from futag.generator import * 
 import time 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm"
-lib_path = "pugixml-1.12"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
+lib_path = "pugixml"
 
-with open("result.ini", "a") as f :
-    start = time.time()
-    test_build = Builder(
-        FUTAG_PATH,
-        lib_path,
-        clean=True,
-        processes=16
-    )
-    test_build.auto_build()
-    test_build.analyze()
-    end = time.time()
-    f.write("- Analyzing time: ")
-    f.write(str(end - start))
-    f.write("\n")
+# with open("result.ini", "a") as f :
+#     start = time.time()
+#     test_build = Builder(
+#         FUTAG_PATH,
+#         lib_path,
+#         clean=True,
+#         processes=16
+#     )
+#     test_build.auto_build()
+#     test_build.analyze()
+#     end = time.time()
+#     f.write("- Analyzing time: ")
+#     f.write(str(end - start))
+#     f.write("\n")
 
 with open("result.ini", "a") as f :
     start = time.time()
@@ -28,7 +28,7 @@ with open("result.ini", "a") as f :
         FUTAG_PATH,
         lib_path,
     )
-    generator.gen_targets(anonymous=False)
+    generator.gen_targets(anonymous=True, max_wrappers=1000)
     
     end = time.time()
     f.write("- Generation time: ")
@@ -36,7 +36,7 @@ with open("result.ini", "a") as f :
     f.write("\n")
 
     start = time.time()
-    generator.compile_targets(keep_failed=True)
+    generator.compile_targets(keep_failed=True, keep_original=True)
     end = time.time()
     f.write("- Compile time: ")
     f.write(str(end - start))

@@ -14,6 +14,7 @@ with open("result.ini", "a") as f :
         FUTAG_PATH,
         lib_path,
         clean=True,
+        intercept=False,
         processes=16
     )
     test_build.auto_build()

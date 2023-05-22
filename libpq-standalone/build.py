@@ -6,7 +6,7 @@ from futag.generator import *
 from futag.fuzzer import * 
 import time 
 
-FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 
 lib_path = "libpq-standalone-REL_15_1"
 with open("result.ini", "a") as f :
@@ -31,7 +31,7 @@ with open("result.ini", "a") as f :
         lib_path,
         target_type=AFLPLUSPLUS
     )
-    generator.gen_targets(anonymous=True)
+    generator.gen_targets(anonymous=True, max_wrappers=1000)
     end = time.time()
     f.write("- Generation time: ")
     f.write(str(end - start))

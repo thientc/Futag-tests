@@ -15,11 +15,11 @@ echo "************************************************"
 echo ""
 
 echo "-- [Futag]: Getting stable Futag package."
-if [ ! -f futag-llvm.2.0.3.tar.xz ]; then
-    wget https://github.com/ispras/Futag/releases/download/2.0.3/futag-llvm.2.0.3.tar.xz
+if [ ! -f futag-llvm.2.0.4.tar.xz ]; then
+    wget https://github.com/ispras/Futag/releases/download/2.0.4/futag-llvm.2.0.4.tar.xz
 fi
 echo "-- [Futag]: Extracting..."
-tar xf futag-llvm.2.0.3.tar.xz
+tar xf futag-llvm.2.0.4.tar.xz
 cd futag-llvm
 ./buildAFLplusplus.sh
 echo "-- [Futag]: Futag package is extracted to futag-llvm folder!"

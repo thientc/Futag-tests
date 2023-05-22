@@ -12,19 +12,19 @@ FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "json-c-json-c-0.16-20220414"
 
 with open("result.ini", "a") as f :
-    start = time.time()
-    build_test = Builder(
-    FUTAG_PATH, 
-        lib_path,
-        clean=True,
-        processes=16,
-    )
-    build_test.auto_build()
-    build_test.analyze()
-    end = time.time()
-    f.write("- Analyzing time: ")
-    f.write(str(end - start))
-    f.write("\n")
+   start = time.time()
+   build_test = Builder(
+   FUTAG_PATH, 
+       lib_path,
+       clean=True,
+       processes=16,
+   )
+   build_test.auto_build()
+   build_test.analyze()
+   end = time.time()
+   f.write("- Analyzing time: ")
+   f.write(str(end - start))
+   f.write("\n")
 
 with open("result.ini", "a") as f :
     start = time.time()

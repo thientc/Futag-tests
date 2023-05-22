@@ -19,7 +19,7 @@ WORKDIR /home/futag/Futag-tests
 RUN apt install -y gcc-11-plugin-dev
 RUN ./get-Futag.sh
 
-RUN pip install /home/futag/Futag-tests/futag-llvm/python-package/futag-2.0.3.tar.gz
+RUN pip install /home/futag/Futag-tests/futag-llvm/python-package/futag-2.0.4.tar.gz
 
 WORKDIR /home/futag/Futag-tests/libpq-standalone
 RUN ./prepare.sh

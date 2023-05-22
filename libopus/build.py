@@ -37,10 +37,10 @@ with open("result.ini", "a") as f :
     f.write("\n")
 
     for x in generator.tmp_output_path.glob("**/*.c"):
-        with open(x.as_posix(), 'r+') as f:
-            content = f.read()
-            f.seek(0, 0)
-            f.write("#define VAR_ARRAYS 1\n" + "#define USE_ALLOCA 1\n" + "#define NONTHREADSAFE_PSEUDOSTACK 1\n" + content)
+        with open(x.as_posix(), 'r+') as fi:
+            content = fi.read()
+            fi.seek(0, 0)
+            fi.write("#define VAR_ARRAYS 1\n" + "#define USE_ALLOCA 1\n" + "#define NONTHREADSAFE_PSEUDOSTACK 1\n" + content)
     
     start = time.time()
     generator.compile_targets(keep_failed=True, extra_include="/home/futag/Futag-tests/libopus/opus-1.3.1/.futag-build/ /home/futag/Futag-tests/libopus/opus-1.3.1/src/", extra_params="-DHAVE_CONFIG_H")

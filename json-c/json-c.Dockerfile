@@ -18,7 +18,7 @@ WORKDIR /home/futag/
 RUN git clone https://github.com/thientc/Futag-tests.git
 WORKDIR /home/futag/Futag-tests
 RUN ./get-Futag.sh
-RUN pip install /home/futag/Futag-tests/futag-llvm/python-package/futag-2.0.3.tar.gz
+RUN pip install /home/futag/Futag-tests/futag-llvm/python-package/futag-2.0.4.tar.gz
 WORKDIR /home/futag/Futag-tests/json-c
 RUN ./prepare.sh
 RUN python3 build-context.py
