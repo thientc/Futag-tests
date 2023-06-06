@@ -4,23 +4,23 @@
 from futag.preprocessor import *
 from futag.generator import * 
 import time 
-FUTAG_PATH = "/home/futag/Futag/futag-llvm"
+FUTAG_PATH = "/home/futag/Futag-tests/futag-llvm"
 lib_path = "pugixml"
 
-# with open("result.ini", "a") as f :
-#     start = time.time()
-#     test_build = Builder(
-#         FUTAG_PATH,
-#         lib_path,
-#         clean=True,
-#         processes=16
-#     )
-#     test_build.auto_build()
-#     test_build.analyze()
-#     end = time.time()
-#     f.write("- Analyzing time: ")
-#     f.write(str(end - start))
-#     f.write("\n")
+with open("result.ini", "a") as f :
+    start = time.time()
+    test_build = Builder(
+        FUTAG_PATH,
+        lib_path,
+        clean=True,
+        processes=16
+    )
+    test_build.auto_build()
+    test_build.analyze()
+    end = time.time()
+    f.write("- Analyzing time: ")
+    f.write(str(end - start))
+    f.write("\n")
 
 with open("result.ini", "a") as f :
     start = time.time()
