@@ -81,3 +81,7 @@ libmpeg2/mpeg2dec-0.4.1/
 lighttpd/lighttpd-1.4.68/
 libmpeg2/mpeg2dec-0.4.1/
 python/Python-3.10.11/
+jsoncpp/jsoncpp
+jsoncpp/jsoncpp/**
+Natch/pugixml
+Natch/pugixml/**
