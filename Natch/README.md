@@ -9,4 +9,7 @@ $ pip install futag-2.0.5.tar.gz
 $ ./prepare.sh
 $ python build.py
 ```
+
 Заменить путь к futag-llvm при необходимости.
+
+Папка "CORPUS" находится под каталогом: library/futag-fuzz-drivers/Natch_corpus
