@@ -16,8 +16,6 @@ build_test = ConsumerBuilder(
 build_test.auto_build()
 build_test.analyze()
 
-
-
 from futag.generator import * 
 from futag.fuzzer import * 
 

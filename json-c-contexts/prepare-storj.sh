@@ -5,9 +5,5 @@
 
 # libudunits2-dev libnetcdf-dev
 
-echo "Required: libudunits2-dev libnetcdf-dev!"
-
-rm -rf cmor-3.6.1
-tar xf cmor_3.6.1.orig.tar.xz
-
-echo "-- [Futag]: Run python3 build.py for generating fuzz-drivers."
+rm -rf libstorj-1.0.3
+tar xf _libstorj.tar.gz
