@@ -7,26 +7,25 @@ from futag.fuzzer import *
 
 FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "tinyxml2-9.0.0"
-# test_build = Builder(
-#     FUTAG_PATH,
-#     lib_path,
-#     processes=8 
-# )
-# test_build.auto_build()
-# test_build.analyze()
-
-# generator = Generator(
-#     FUTAG_PATH,
-#     lib_path,
-# )
-# generator.gen_targets()
-# generator.compile_targets(8)
-
-
-fuzzer = Fuzzer( # модуль для фаззинга
+test_build = Builder(
     FUTAG_PATH,
-    fuzz_driver_path="tinyxml2-9.0.0/futag-fuzz-drivers/", 
-    totaltime=10, # время фаззинга одной обертки
-    fork=1
+    lib_path,
 )
-fuzzer.fuzz()
+test_build.auto_build()
+test_build.analyze()
+
+generator = Generator(
+    FUTAG_PATH,
+    lib_path,
+)
+generator.gen_targets()
+generator.compile_targets(keep_failed=True,)
+
+
+# fuzzer = Fuzzer( # модуль для фаззинга
+#     FUTAG_PATH,
+#     fuzz_driver_path="tinyxml2-9.0.0/futag-fuzz-drivers/", 
+#     totaltime=10, # время фаззинга одной обертки
+#     fork=1
+# )
+# fuzzer.fuzz()

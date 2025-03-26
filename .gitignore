@@ -4,7 +4,8 @@ futag-llvm.latest.tar.xz
 nginx/
 libFuzzer/*
 **/result.ini 
-
+**/*.err 
+**/_coverage/** 
 json-c/json-c-0.16-20220414.tar.gz
 json-c/json-c-json-c-0.16-20220414*
 json-c/*.c

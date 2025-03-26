@@ -8,32 +8,33 @@ from futag.fuzzer import *
 
 FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "json-c-json-c-0.16-20220414"
-build_test = Builder(
-   FUTAG_PATH, 
-   lib_path,
-   clean=True,
-   processes=16,
-)
-build_test.auto_build()
-build_test.analyze()
+# build_test = Builder(
+#    FUTAG_PATH, 
+#    lib_path,
+#    clean=True,
+#    processes=16,
+# )
+# build_test.auto_build()
+# build_test.analyze()
 
-generator = Generator(
-    FUTAG_PATH, 
-    lib_path,
-    target_type=LIBFUZZER
-)
+# generator = Generator(
+#     FUTAG_PATH, 
+#     lib_path,
+#     target_type=LIBFUZZER
+# )
 
-generator.gen_targets()
-generator.compile_targets(
-    coverage=True,
-    keep_failed=True,
-)
+# generator.gen_targets()
+# generator.compile_targets(
+#     coverage=True,
+#     keep_failed=True,
+# )
 
 fuzzer = Fuzzer(
     FUTAG_PATH,
-    "/home/futag/Futag-tests/json-c/json-c-json-c-0.16-20220414/futag-fuzz-drivers",
-    debug=True,
-    svres=True,
-    totaltime= 2,
+    "/home/russell/Futag-tests/json-c/json-c-json-c-0.16-20220414/futag-fuzz-drivers",
+    # debug=True,
+    # svres=True,
+    totaltime= 10,
+    coverage=True
 )
 fuzzer.fuzz()

@@ -1,0 +1,8 @@
+clang++ -fprofile-instr-generate -fcoverage-mapping foo.cc -o foo
+LLVM_PROFILE_FILE="foo.profraw" ./foo
+llvm-profdata merge -sparse foo.profraw -o foo.profdata
+llvm-cov show ./foo -instr-profile=foo.profdata
+-detect_leaks=0 -rss_limit_mb=0 -max_total_time=2
+
+
+export ASAN_SYMBOLIZER_PATH=/home/russell/Futag/futag-install/bin/llvm-symbolizer
